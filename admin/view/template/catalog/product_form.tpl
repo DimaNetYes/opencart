@@ -112,8 +112,8 @@
                   <td><input type="text" name="products_discount" value="<?php echo $products_discount; ?>"/></td>
               </tr>
               <tr>
-                  <td><?php echo $entry_jan; ?></td>
-                  <td><input type="file" name="jan"></td>
+                  <td><?php echo $entry_imageSales; ?></td>
+                  <td><input type="file" name="imageSales"></td>
               </tr>
             <tr>
               <td><?php echo $entry_tax_class; ?></td>

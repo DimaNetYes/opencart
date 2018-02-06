@@ -830,6 +830,7 @@ class ControllerCatalogProduct extends Controller {
     	$this->data['entry_quantity'] = $this->language->get('entry_quantity');
 		$this->data['entry_stock_status'] = $this->language->get('entry_stock_status');
     	$this->data['entry_price'] = $this->language->get('entry_price');
+        $this->data['entry_imageSales'] = $this->language->get('entry_imageSales');
         $this->data['entry_products_discount'] = $this->language->get('entry_products_discount');
 		$this->data['entry_tax_class'] = $this->language->get('entry_tax_class');
 		$this->data['entry_points'] = $this->language->get('entry_points');
@@ -1137,12 +1138,12 @@ class ControllerCatalogProduct extends Controller {
             $this->data['products_discount'] = '';
         }
 //					Картинка sales
-		if (isset($this->request->post['jan'])) {
-            $this->data['jan'] = $this->request->post['jan'];
+		if (isset($this->request->post['imageSales'])) {
+            $this->data['imageSales'] = $this->request->post['imageSales'];
         } else if (isset($product_info)) {
-            $this->data['jan'] = $product_info['jan'];
+            $this->data['imageSales'] = $product_info['imageSales'];
         } else {
-            $this->data['jan'] = '';
+            $this->data['imageSales'] = '';
         }
 		
 		$this->load->model('localisation/tax_class');

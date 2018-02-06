@@ -238,3 +238,11 @@
 2018-02-06 18:17:27 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
 2018-02-06 18:17:27 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
 2018-02-06 18:17:27 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-06 18:44:53 - PHP Notice:  Undefined variable: entry_imageSales in D:\OSPanel\domains\ocs\admin\view\template\catalog\product_form.tpl on line 115
+2018-02-06 18:47:28 - PHP Notice:  Undefined variable: entry_imageSales in D:\OSPanel\domains\ocs\admin\view\template\catalog\product_form.tpl on line 115
+2018-02-06 18:47:35 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
+2018-02-06 18:47:35 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
+2018-02-06 18:47:35 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
+2018-02-06 18:50:17 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
+2018-02-06 18:50:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
+2018-02-06 18:50:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
