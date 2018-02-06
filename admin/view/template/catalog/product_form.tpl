@@ -1261,10 +1261,10 @@ $('#vtab-option a').tabs();
 //--></script>
 
 
-<script type="text/javascript" src="../../javascript/jquery/ajaxupload.js"></script>
-<script type="text/javascript"><!--
+<script type="text/javascript" src="view/javascript/jquery/ajaxupload.js"></script>
+<script type="text/javascript">
     new AjaxUpload('#button-upload-jan', {
-        action: 'index.php?route=catalog/download/upload_jan&token=<?php echo $token; ?>',
+        action: 'index.php?route=catalog/product/upload_jan&token=<?php echo $token; ?>',
         name: 'file',
         autoSubmit: true,
         responseType: 'json',
@@ -1284,5 +1284,5 @@ $('#vtab-option a').tabs();
             $('.loading').remove();
         }
     });
-    //--></script>
+    </script>
 <?php echo $footer; ?>

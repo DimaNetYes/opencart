@@ -2,6 +2,7 @@
 class ControllerCatalogProduct extends Controller {
 	private $error = array();
 
+
   	public function index() {
 		$this->language->load('catalog/product');
 		$this->document->setTitle($this->language->get('heading_title')); 
@@ -605,7 +606,7 @@ class ControllerCatalogProduct extends Controller {
 					break;
 				}					
 			}
-	
+
       		$this->data['products'][] = array(
 				'product_id' => $result['product_id'],
 				'category'   => $this->model_catalog_product->getProductCatNames($result['product_id']),
@@ -621,7 +622,7 @@ class ControllerCatalogProduct extends Controller {
 				'action'     => $action
 			);
     	}
-		
+
 		$this->data['heading_title'] = $this->language->get('heading_title');		
 				
 		$this->data['text_enabled'] = $this->language->get('text_enabled');		
@@ -1715,5 +1716,39 @@ class ControllerCatalogProduct extends Controller {
 
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+
+    public function transform($string){
+        $arr = array( 'А' => 'A' , 'Б' => 'B' , 'В' => 'V' , 'Г' => 'G', 'Д' => 'D' , 'Е' => 'E' , 'Ё' => 'JO' , 'Ж' => 'ZH', 'З' => 'Z' , 'И' => 'I' , 'Й' => 'JJ' , 'К' => 'K', 'Л' => 'L' , 'М' => 'M' , 'Н' => 'N' , 'О' => 'O', 'П' => 'P' , 'Р' => 'R' , 'С' => 'S' , 'Т' => 'T', 'У' => 'U' , 'Ф' => 'F' , 'Х' => 'KH' , 'Ц' => 'C', 'Ч' => 'CH', 'Ш' => 'SH', 'Щ' => 'SHH', 'Ъ' => '"', 'Ы' => 'Y' , 'Ь' => '', 'Э' => 'EH' , 'Ю' => 'JU', 'Я' => 'JA', 'а' => 'a' , 'б' => 'b' , 'в' => 'v' , 'г' => 'g', 'д' => 'd', 'е' => 'e' , 'ё' => 'jo' , 'ж' => 'zh', 'з' => 'z', 'и' => 'i', 'й' => 'jj', 'к' => 'k' , 'л' => 'l' , 'м' => 'm', 'н' => 'n', 'о' => 'o' , 'п' => 'p' , 'р' => 'r' , 'с' => 's', 'т' => 't', 'у' => 'u' , 'ф' => 'f' , 'х' => 'kh', 'ц' => 'c', 'ч' => 'ch', 'ш' => 'sh', 'щ' => 'shh', 'ъ' => '"' , 'ы' => 'y', 'ь' => '_', 'э' => 'eh', 'ю' => 'ju' , 'я' => 'ja', ' ' => '_');
+        $key = array_keys($arr);
+        $val = array_values($arr);
+        $translate = str_replace($key, $val, $string);
+        return $translate;
+    }
+
+    public function upload_jan()
+    {
+        $json = array();
+        if (!empty($this->request->files['file']['name'])) {
+            $filename = $this->transform($this->request->files['file']['name']);
+            if ((utf8_strlen($filename) < 3) || (utf8_strlen($filename) > 1000)) {
+                $json['error'] = $this->language->get('error_filename');
+            }
+            if ($this->request->files['file']['error'] != UPLOAD_ERR_OK) {
+                $json['error'] = $this->language->get('error_upload_' . $this->request->files['file']['error']);
+            }
+        } else {
+            $json['error'] = $this->language->get('error_upload');
+        }
+
+        if (!isset($json['error'])) {
+            $json['jan'] = $filename;
+            $json['success'] = "Файл загружен успешно!";
+        }
+
+        $this->response->setOutput(json_encode($json));
+    }
+
 }
 ?>

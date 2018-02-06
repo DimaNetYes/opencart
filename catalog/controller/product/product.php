@@ -92,7 +92,7 @@ class ControllerProductProduct extends Controller {
 			if (isset($this->request->get['page'])) {
 				$url .= '&page=' . $this->request->get['page'];
 			}
-						
+
 			if (isset($this->request->get['limit'])) {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
@@ -352,7 +352,9 @@ class ControllerProductProduct extends Controller {
 					'price'    => $this->currency->format($this->tax->calculate($discount['price'], $product_info['tax_class_id'], $this->config->get('config_tax')))
 				);
 			}
-			
+
+            $this->data['file'] = "../../../../image/data/".$product_info['jan'];
+
 			$this->data['options'] = array();
 
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) { 
