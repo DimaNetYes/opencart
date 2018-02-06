@@ -1137,7 +1137,7 @@ class ControllerCatalogProduct extends Controller {
         } else {
             $this->data['products_discount'] = '';
         }
-//					Картинка sales
+
 		if (isset($this->request->post['imageSales'])) {
             $this->data['imageSales'] = $this->request->post['imageSales'];
         } else if (isset($product_info)) {

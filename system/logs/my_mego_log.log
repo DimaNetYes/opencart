@@ -246,3 +246,24 @@
 2018-02-06 18:50:17 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
 2018-02-06 18:50:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
 2018-02-06 18:50:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
+2018-02-06 18:53:40 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-06 18:53:40 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-06 18:53:40 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-06 18:53:50 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-06 18:53:50 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-06 18:53:50 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-06 18:54:02 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
+2018-02-06 18:54:02 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
+2018-02-06 18:54:02 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
+2018-02-06 18:56:34 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
+2018-02-06 18:56:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
+2018-02-06 18:56:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
+2018-02-06 19:05:32 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
+2018-02-06 19:05:32 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
+2018-02-06 19:05:32 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
+2018-02-06 19:10:42 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
+2018-02-06 19:10:42 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
+2018-02-06 19:10:42 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
+2018-02-06 19:13:42 - PHP Notice:  Undefined index: imageSales in D:\OSPanel\domains\ocs\admin\model\catalog\product.php on line 131
+2018-02-06 19:13:42 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 28
+2018-02-06 19:13:42 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\ocs\admin\index.php:82) in D:\OSPanel\domains\ocs\system\engine\controller.php on line 29
