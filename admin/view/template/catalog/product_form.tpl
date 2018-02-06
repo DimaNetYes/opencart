@@ -112,8 +112,8 @@
                   <td><input type="text" name="products_discount" value="<?php echo $products_discount; ?>"/></td>
               </tr>
               <tr>
-                  <td>Изображение Скидки:</td>
-                  <td><input type="text" name="jan" value="<?php echo $jan; ?>" /> <a id="button-upload-jan" class="button">Обзор</a></td>
+                  <td><?php echo $entry_jan; ?></td>
+                  <td><input type="file" name="jan"></td>
               </tr>
             <tr>
               <td><?php echo $entry_tax_class; ?></td>
@@ -1261,28 +1261,4 @@ $('#vtab-option a').tabs();
 //--></script>
 
 
-<script type="text/javascript" src="view/javascript/jquery/ajaxupload.js"></script>
-<script type="text/javascript">
-    new AjaxUpload('#button-upload-jan', {
-        action: 'index.php?route=catalog/product/upload_jan&token=<?php echo $token; ?>',
-        name: 'file',
-        autoSubmit: true,
-        responseType: 'json',
-        onSubmit: function(file, extension) {
-            $('#button-upload-jan').after('<img src="view/image/loading.gif" class="loading" style="padding-left: 5px;" />');
-            $('#button-upload-jan').attr('disabled', true);
-        },
-        onComplete: function(file, json) {
-            $('#button-upload').attr('disabled', false);
-            if (json['success']) {
-                alert(json['success']);
-                $('input[name="jan"]').attr('value', json['jan']);
-            }
-            if (json['error']) {
-                alert(json['error']);
-            }
-            $('.loading').remove();
-        }
-    });
-    </script>
 <?php echo $footer; ?>

@@ -352,8 +352,8 @@ class ControllerProductProduct extends Controller {
 					'price'    => $this->currency->format($this->tax->calculate($discount['price'], $product_info['tax_class_id'], $this->config->get('config_tax')))
 				);
 			}
-
-            $this->data['file'] = "../../../../image/data/".$product_info['jan'];
+                    //Мои путь
+//            $this->data['file'] = "../../../../image/data/".$product_info['jan'];
 
 			$this->data['options'] = array();
 

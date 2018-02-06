@@ -1038,7 +1038,7 @@ class ControllerCatalogProduct extends Controller {
 		} else {
       		$this->data['ean'] = '';
     	}
-		
+
 		if (isset($this->request->post['jan'])) {
       		$this->data['jan'] = $this->request->post['jan'];
     	} elseif (!empty($product_info)) {
@@ -1135,6 +1135,14 @@ class ControllerCatalogProduct extends Controller {
             $this->data['products_discount'] = $product_info['products_discount'];
         } else {
             $this->data['products_discount'] = '';
+        }
+//					Картинка sales
+		if (isset($this->request->post['jan'])) {
+            $this->data['jan'] = $this->request->post['jan'];
+        } else if (isset($product_info)) {
+            $this->data['jan'] = $product_info['jan'];
+        } else {
+            $this->data['jan'] = '';
         }
 		
 		$this->load->model('localisation/tax_class');
@@ -1718,37 +1726,6 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 
-
-    public function transform($string){
-        $arr = array( 'А' => 'A' , 'Б' => 'B' , 'В' => 'V' , 'Г' => 'G', 'Д' => 'D' , 'Е' => 'E' , 'Ё' => 'JO' , 'Ж' => 'ZH', 'З' => 'Z' , 'И' => 'I' , 'Й' => 'JJ' , 'К' => 'K', 'Л' => 'L' , 'М' => 'M' , 'Н' => 'N' , 'О' => 'O', 'П' => 'P' , 'Р' => 'R' , 'С' => 'S' , 'Т' => 'T', 'У' => 'U' , 'Ф' => 'F' , 'Х' => 'KH' , 'Ц' => 'C', 'Ч' => 'CH', 'Ш' => 'SH', 'Щ' => 'SHH', 'Ъ' => '"', 'Ы' => 'Y' , 'Ь' => '', 'Э' => 'EH' , 'Ю' => 'JU', 'Я' => 'JA', 'а' => 'a' , 'б' => 'b' , 'в' => 'v' , 'г' => 'g', 'д' => 'd', 'е' => 'e' , 'ё' => 'jo' , 'ж' => 'zh', 'з' => 'z', 'и' => 'i', 'й' => 'jj', 'к' => 'k' , 'л' => 'l' , 'м' => 'm', 'н' => 'n', 'о' => 'o' , 'п' => 'p' , 'р' => 'r' , 'с' => 's', 'т' => 't', 'у' => 'u' , 'ф' => 'f' , 'х' => 'kh', 'ц' => 'c', 'ч' => 'ch', 'ш' => 'sh', 'щ' => 'shh', 'ъ' => '"' , 'ы' => 'y', 'ь' => '_', 'э' => 'eh', 'ю' => 'ju' , 'я' => 'ja', ' ' => '_');
-        $key = array_keys($arr);
-        $val = array_values($arr);
-        $translate = str_replace($key, $val, $string);
-        return $translate;
-    }
-
-    public function upload_jan()
-    {
-        $json = array();
-        if (!empty($this->request->files['file']['name'])) {
-            $filename = $this->transform($this->request->files['file']['name']);
-            if ((utf8_strlen($filename) < 3) || (utf8_strlen($filename) > 1000)) {
-                $json['error'] = $this->language->get('error_filename');
-            }
-            if ($this->request->files['file']['error'] != UPLOAD_ERR_OK) {
-                $json['error'] = $this->language->get('error_upload_' . $this->request->files['file']['error']);
-            }
-        } else {
-            $json['error'] = $this->language->get('error_upload');
-        }
-
-        if (!isset($json['error'])) {
-            $json['jan'] = $filename;
-            $json['success'] = "Файл загружен успешно!";
-        }
-
-        $this->response->setOutput(json_encode($json));
-    }
 
 }
 ?>

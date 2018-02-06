@@ -11,11 +11,11 @@
       <?php if ($thumb) { ?>
       <div class="image">
         <!-- скидка -->
-        <?php if(strlen($file) > 23) { ?> <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox2"> <img src="<?php echo $file; ?>" title="<?php echo $file; ?>" alt="<?php echo $file; ?>" id="imageSale" /> </a> <?php } ?>
+        <?php  ?> <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox2"> <img src="<?php echo $file; ?>" title="<?php echo $file; ?>" alt="<?php echo $file; ?>" id="imageSale" /> </a> <?php } ?>
         <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" />
        </a>
       </div>
-      <?php } ?>
+      <?php  ?>
 
 
       <?php if ($images) { ?>
