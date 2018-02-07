@@ -76,6 +76,8 @@ class ModelCatalogProduct extends Model {
 				'date_modified'    => $query->row['date_modified'],
 				'viewed'           => $query->row['viewed'],
                 'products_discount'         =>$query->row['products_discount'],
+                'sales_w'            =>$query->row['sales_w'],
+                'sales_h'            =>$query->row['sales_h'],
 			);
 		} else {
 			return false;

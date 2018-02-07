@@ -2,7 +2,7 @@
 <style type="text/css">
   #imageSale2 {
     display: inline-block;
-    width: 40px;
+    /*width: 40px;*/
     height: 40px;
     margin-left: 15px;
     position: absolute;
@@ -20,12 +20,17 @@
       <?php if ($thumb) { ?>
       <div class="image">
         <!-- скидка -->
-        <?php if(isset($image_sales)) { ?> <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
-                                              class="colorbox2"> <img src="<?php echo $image_sales; ?>" id="imageSale"/>
+        <?php if(isset($image_sales)) { ?>
+        <!--конкатенация-->
+        <?php $sales_w.="px";?>
+        <?php $sales_h.="px";?>
+
+        <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox2">
+          <img src="<?php echo $image_sales; ?>" id="imageSale" <?php echo "style='width:$sales_w; height:$sales_h'";?> />
         </a> <?php } ?>
         <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img
                   src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"
-                  id="image"/>
+                  id="image"  />
         </a>
       </div>
       <?php } ?>
@@ -63,7 +68,7 @@
         <?php if ($products_discount_current > 0) { ?>
         <tr>
           <td><b><?php echo $text_products_discount; ?></b></td>
-          <td><?php echo "\$".$products_discount; ?><img src="<?php echo $image_sales; ?>" id="imageSale2"/></td>
+          <td><?php echo "\$".$products_discount; ?><img src="<?php echo $image_sales; ?>" id="imageSale2" <?php echo "style='width:$sales_w; height:$sales_h'";?> /></td>
         </tr>
 <br>
         <?php } ?>

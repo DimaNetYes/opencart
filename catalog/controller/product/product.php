@@ -171,6 +171,10 @@ class ControllerProductProduct extends Controller {
             $image_sales = $this->data['image_sales'] = "../../image/" . $product_info['image_sales'];
         }
 
+                    //width and height
+        $sales_w = $this->data['sales_w'] = $product_info['sales_w'];
+        $sales_h = $this->data['sales_h'] = $product_info['sales_h'];
+
 		if ($product_info) {
 			$url = '';
 			
@@ -255,6 +259,7 @@ class ControllerProductProduct extends Controller {
 			$this->data['text_discount'] = $this->language->get('text_discount');
 			$this->data['text_stock'] = $this->language->get('text_stock');
 			$this->data['text_price'] = $this->language->get('text_price');
+
             $this->data['text_ean'] = $this->language->get('text_ean');
 
 			$this->data['text_tax'] = $this->language->get('text_tax');

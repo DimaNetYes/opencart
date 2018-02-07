@@ -765,3 +765,4 @@
 2018-02-07 17:46:59 - PHP Notice:  Undefined variable: entry_height in D:\OSPanel\domains\ocs\admin\view\template\catalog\product_form.tpl on line 129
 2018-02-07 18:04:50 - PHP Notice:  Undefined index: sales_w in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1161
 2018-02-07 18:04:50 - PHP Notice:  Undefined index: sales_h in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1169
+2018-02-07 18:48:17 - PHP Notice:  Undefined variable: sales_wpx in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 25
