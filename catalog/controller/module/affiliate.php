@@ -31,7 +31,7 @@ class ControllerModuleAffiliate extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/affiliate.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/affiliate.tpl';
 		} else {
-			$this->template = 'default/template/module/affiliate.tpl';
+			$this->template = 'template/template/module/affiliate.tpl';
 		}
 		
 		$this->render();

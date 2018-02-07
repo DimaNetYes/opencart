@@ -23,7 +23,7 @@ CodeMirror.colorize = (function() {
       node.innerHTML = "";
       CodeMirror.runMode(text.join(""), mode, node);
 
-      node.className += " cm-s-default";
+      node.className += " cm-s-template";
     }
   };
 })();

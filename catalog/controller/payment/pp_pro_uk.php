@@ -78,7 +78,7 @@ class ControllerPaymentPPProUK extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_pro_uk.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/pp_pro_uk.tpl';
 		} else {
-			$this->template = 'default/template/payment/pp_pro_uk.tpl';
+			$this->template = 'template/template/payment/pp_pro_uk.tpl';
 		}	
 		
 		$this->render();		

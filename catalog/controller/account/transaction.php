@@ -87,7 +87,7 @@ class ControllerAccountTransaction extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/transaction.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/transaction.tpl';
 		} else {
-			$this->template = 'default/template/account/transaction.tpl';
+			$this->template = 'template/template/account/transaction.tpl';
 		}
 		
 		$this->children = array(

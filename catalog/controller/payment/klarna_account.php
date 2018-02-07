@@ -278,7 +278,7 @@ class ControllerPaymentKlarnaAccount extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/klarna_account.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/payment/klarna_account.tpl';
 			} else {
-				$this->template = 'default/template/payment/klarna_account.tpl';
+				$this->template = 'template/template/payment/klarna_account.tpl';
 			}
 	
 			$this->render();

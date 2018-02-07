@@ -39,7 +39,7 @@ class ControllerModuleAccount extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/account.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/account.tpl';
 		} else {
-			$this->template = 'default/template/module/account.tpl';
+			$this->template = 'template/template/module/account.tpl';
 		}
 		
 		$this->render();

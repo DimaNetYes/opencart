@@ -11,7 +11,7 @@ class ControllerModuleSlideshow extends Controller {
 		if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/slideshow.css')) {
 			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/slideshow.css');
 		} else {
-			$this->document->addStyle('catalog/view/theme/default/stylesheet/slideshow.css');
+			$this->document->addStyle('catalog/view/theme/template/stylesheet/slideshow.css');
 		}
 		
 		$this->data['width'] = $setting['width'];
@@ -38,7 +38,7 @@ class ControllerModuleSlideshow extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/slideshow.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/slideshow.tpl';
 		} else {
-			$this->template = 'default/template/module/slideshow.tpl';
+			$this->template = 'template/template/module/slideshow.tpl';
 		}
 		
 		$this->render();

@@ -98,7 +98,7 @@ class ControllerInformationSitemap extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/sitemap.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/information/sitemap.tpl';
 		} else {
-			$this->template = 'default/template/information/sitemap.tpl';
+			$this->template = 'template/template/information/sitemap.tpl';
 		}
 		
 		$this->children = array(

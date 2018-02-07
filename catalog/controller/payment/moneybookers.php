@@ -47,7 +47,7 @@ class ControllerPaymentMoneybookers extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/moneybookers.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/moneybookers.tpl';
 		} else {
-			$this->template = 'default/template/payment/moneybookers.tpl';
+			$this->template = 'template/template/payment/moneybookers.tpl';
 		}	
 		
 		$this->render();

@@ -89,7 +89,7 @@ class ControllerAccountForgotten extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/forgotten.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/forgotten.tpl';
 		} else {
-			$this->template = 'default/template/account/forgotten.tpl';
+			$this->template = 'template/template/account/forgotten.tpl';
 		}
 		
 		$this->children = array(

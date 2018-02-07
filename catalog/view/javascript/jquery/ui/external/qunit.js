@@ -439,7 +439,7 @@ var config = {
 	// block until document ready
 	blocking: true,
 
-	// by default, run previously failed tests first
+	// by template, run previously failed tests first
 	// very useful in combination with "Hide passed tests" checked
 	reorder: true,
 

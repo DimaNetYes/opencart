@@ -1549,7 +1549,7 @@ window.CodeMirror = (function() {
     var txt = cm.getSelection();
     e.dataTransfer.setData("Text", txt);
 
-    // Use dummy image instead of default browsers image.
+    // Use dummy image instead of template browsers image.
     // Recent Safari (~6.0.2) have a tendency to segfault when this happens, so we don't do it there.
     if (e.dataTransfer.setDragImage && !safari)
       e.dataTransfer.setDragImage(elt('img'), 0, 0);
@@ -2770,7 +2770,7 @@ window.CodeMirror = (function() {
 
   var optionHandlers = CodeMirror.optionHandlers = {};
 
-  // The default configuration options.
+  // The template configuration options.
   var defaults = CodeMirror.defaults = {};
 
   function option(name, deflt, handle, notOnInit) {
@@ -3018,7 +3018,7 @@ window.CodeMirror = (function() {
     "Enter": "newlineAndIndent", "Insert": "toggleOverwrite"
   };
   // Note that the save and find-related commands aren't defined by
-  // default. Unknown commands are simply ignored.
+  // template. Unknown commands are simply ignored.
   keyMap.pcDefault = {
     "Ctrl-A": "selectAll", "Ctrl-D": "deleteLine", "Ctrl-Z": "undo", "Shift-Ctrl-Z": "redo", "Ctrl-Y": "redo",
     "Ctrl-Home": "goDocStart", "Alt-Up": "goDocStart", "Ctrl-End": "goDocEnd", "Ctrl-Down": "goDocEnd",

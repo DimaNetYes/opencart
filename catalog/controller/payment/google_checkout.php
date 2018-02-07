@@ -16,7 +16,7 @@ class ControllerPaymentGoogleCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/google_checkout.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/google_checkout.tpl';
 		} else {
-			$this->template = 'default/template/payment/google_checkout.tpl';
+			$this->template = 'template/template/payment/google_checkout.tpl';
 		}	
 		
 		$this->render();

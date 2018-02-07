@@ -35,7 +35,7 @@ class ControllerPaymentWorldPay extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/worldpay.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/worldpay.tpl';
 		} else {
-			$this->template = 'default/template/payment/worldpay.tpl';
+			$this->template = 'template/template/payment/worldpay.tpl';
 		}	
 		
 		$this->render();
@@ -114,7 +114,7 @@ class ControllerPaymentWorldPay extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/worldpay_success.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/payment/worldpay_success.tpl';
 			} else {
-				$this->template = 'default/template/payment/worldpay_success.tpl';
+				$this->template = 'template/template/payment/worldpay_success.tpl';
 			}	
 	
 			$this->response->setOutput($this->render());				
@@ -124,7 +124,7 @@ class ControllerPaymentWorldPay extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/worldpay_failure.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/payment/worldpay_failure.tpl';
 			} else {
-				$this->template = 'default/template/payment/worldpay_failure.tpl';
+				$this->template = 'template/template/payment/worldpay_failure.tpl';
 			}
 			
 			$this->response->setOutput($this->render());					

@@ -5,8 +5,8 @@ class ModelToolImage extends Model {
 	*	@param filename string
 	*	@param width 
 	*	@param height
-	*	@param type char [default, w, h]
-	*				default = scale with white space, 
+	*	@param type char [template, w, h]
+	*				template = scale with white space, 
 	*				w = fill according to width, 
 	*				h = fill according to height
 	*	

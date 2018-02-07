@@ -79,7 +79,7 @@ class ControllerCommonColumnRight extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/column_right.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/column_right.tpl';
 		} else {
-			$this->template = 'default/template/common/column_right.tpl';
+			$this->template = 'template/template/common/column_right.tpl';
 		}
 								
 		$this->render();

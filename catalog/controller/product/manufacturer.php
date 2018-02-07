@@ -56,7 +56,7 @@ class ControllerProductManufacturer extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/manufacturer_list.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/product/manufacturer_list.tpl';
 		} else {
-			$this->template = 'default/template/product/manufacturer_list.tpl';
+			$this->template = 'template/template/product/manufacturer_list.tpl';
 		}			
 		
 		$this->children = array(
@@ -375,7 +375,7 @@ class ControllerProductManufacturer extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/manufacturer_info.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/product/manufacturer_info.tpl';
 			} else {
-				$this->template = 'default/template/product/manufacturer_info.tpl';
+				$this->template = 'template/template/product/manufacturer_info.tpl';
 			}
 			
 			$this->children = array(
@@ -430,7 +430,7 @@ class ControllerProductManufacturer extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
 			} else {
-				$this->template = 'default/template/error/not_found.tpl';
+				$this->template = 'template/template/error/not_found.tpl';
 			}
 			
 			$this->children = array(

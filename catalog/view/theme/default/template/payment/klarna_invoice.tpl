@@ -95,7 +95,7 @@ $('#button-confirm').on('click', function() {
 			
 			$('.warning, .error').remove();
 			
-			$('#payment').before('<div class="attention"><img src="catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
+			$('#payment').before('<div class="attention"><img src="catalog/view/theme/template/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
 		},
 		complete: function() {
 			$('#button-confirm').attr('disabled', false);

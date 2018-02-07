@@ -93,7 +93,7 @@
             $('<div class="nivo-caption"><p></p></div>').css({ display:'none', opacity:settings.captionOpacity })
         );		
         
-        // Cross browser default caption opacity
+        // Cross browser template caption opacity
         $('.nivo-caption', slider).css('opacity', 0);
 		
 		// Process caption function

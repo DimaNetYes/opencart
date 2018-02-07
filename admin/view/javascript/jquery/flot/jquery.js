@@ -204,7 +204,7 @@ jQuery.fn = jQuery.prototype = {
 	// The current version of jQuery being used
 	jquery: "1.5.1",
 
-	// The default length of a jQuery object is 0
+	// The template length of a jQuery object is 0
 	length: 0,
 
 	// The number of elements contained in the matched element set
@@ -1127,7 +1127,7 @@ return jQuery;
 		style: /red/.test( a.getAttribute("style") ),
 
 		// Make sure that URLs aren't manipulated
-		// (IE normalizes it by default)
+		// (IE normalizes it by template)
 		hrefNormalized: a.getAttribute("href") === "/a",
 
 		// Make sure that element opacity exists
@@ -1144,7 +1144,7 @@ return jQuery;
 		// (WebKit defaults to "" instead)
 		checkOn: input.value === "on",
 
-		// Make sure that a selected-by-default option has a working selected property.
+		// Make sure that a selected-by-template option has a working selected property.
 		// (WebKit defaults to false instead of true, IE too, if it's in an optgroup)
 		optSelected: opt.selected,
 
@@ -2033,7 +2033,7 @@ jQuery.extend({
 			// These attributes require special treatment
 			var special = rspecialurl.test( name );
 
-			// Safari mis-reports the default selected property of an option
+			// Safari mis-reports the template selected property of an option
 			// Accessing the parent's selectedIndex property fixes it
 			if ( name === "selected" && !jQuery.support.optSelected ) {
 				var parent = elem.parentNode;
@@ -2977,7 +2977,7 @@ if ( !jQuery.support.changeBubbles ) {
 function trigger( type, elem, args ) {
 	// Piggyback on a donor event to simulate a different one.
 	// Fake originalEvent to avoid donor's stopPropagation, but if the
-	// simulated event prevents default then we do the same on the donor.
+	// simulated event prevents template then we do the same on the donor.
 	// Don't pass args or remember liveFired; they apply to the donor event.
 	var event = jQuery.extend( {}, args[ 0 ] );
 	event.type = type;
@@ -3892,7 +3892,7 @@ var Expr = Sizzle.selectors = {
 		},
 		
 		selected: function( elem ) {
-			// Accessing this property makes selected-by-default
+			// Accessing this property makes selected-by-template
 			// options in Safari work properly
 			if ( elem.parentNode ) {
 				elem.parentNode.selectedIndex;
@@ -5410,7 +5410,7 @@ function cloneFixAttributes(src, dest) {
 			dest.value = src.value;
 		}
 
-	// IE6-8 fails to return the selected option to the default selected
+	// IE6-8 fails to return the selected option to the template selected
 	// state when cloning options
 	} else if ( nodeName === "option" ) {
 		dest.selected = src.defaultSelected;
@@ -5737,7 +5737,7 @@ jQuery.fn.css = function( name, value ) {
 };
 
 jQuery.extend({
-	// Add in style property hooks for overriding the default
+	// Add in style property hooks for overriding the template
 	// behavior of getting and setting a style property
 	cssHooks: {
 		opacity: {
@@ -7446,7 +7446,7 @@ jQuery.fn.extend({
 				}
 
 				// Set elements which have been overridden with display: none
-				// in a stylesheet to whatever the default browser style is
+				// in a stylesheet to whatever the template browser style is
 				// for such an element
 				if ( display === "" && jQuery.css( elem, "display" ) === "none" ) {
 					jQuery._data(elem, "olddisplay", defaultDisplay(elem.nodeName));
@@ -8303,7 +8303,7 @@ jQuery.each([ "Height", "Width" ], function( i, name ) {
 
 			return jQuery.isNaN( ret ) ? orig : ret;
 
-		// Set the width or height on the element (default to pixels if value is unitless)
+		// Set the width or height on the element (template to pixels if value is unitless)
 		} else {
 			return this.css( type, typeof size === "string" ? size : size + "px" );
 		}

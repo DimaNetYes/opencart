@@ -99,7 +99,7 @@ class ModelCheckoutVoucher extends Model {
 				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/mail/voucher.tpl')) {
 					$html = $template->fetch($this->config->get('config_template') . '/template/mail/voucher.tpl');
 				} else {
-					$html = $template->fetch('default/template/mail/voucher.tpl');
+					$html = $template->fetch('template/template/mail/voucher.tpl');
 				}
 					
 				$mail = new Mail(); 

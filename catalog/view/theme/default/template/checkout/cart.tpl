@@ -212,7 +212,7 @@ $('#button-quote').live('click', function() {
 		dataType: 'json',		
 		beforeSend: function() {
 			$('#button-quote').attr('disabled', true);
-			$('#button-quote').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+			$('#button-quote').after('<span class="wait">&nbsp;<img src="catalog/view/theme/template/image/loading.gif" alt="" /></span>');
 		},
 		complete: function() {
 			$('#button-quote').attr('disabled', false);
@@ -223,7 +223,7 @@ $('#button-quote').live('click', function() {
 						
 			if (json['error']) {
 				if (json['error']['warning']) {
-					$('#notification').html('<div class="warning" style="display: none;">' + json['error']['warning'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
+					$('#notification').html('<div class="warning" style="display: none;">' + json['error']['warning'] + '<img src="catalog/view/theme/template/image/close.png" alt="" class="close" /></div>');
 					
 					$('.warning').fadeIn('slow');
 					
@@ -309,7 +309,7 @@ $('select[name=\'country_id\']').bind('change', function() {
 		url: 'index.php?route=checkout/cart/country&country_id=' + this.value,
 		dataType: 'json',
 		beforeSend: function() {
-			$('select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+			$('select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/template/image/loading.gif" alt="" /></span>');
 		},
 		complete: function() {
 			$('.wait').remove();

@@ -11,7 +11,7 @@ class ControllerModuleCarousel extends Controller {
 		if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/carousel.css')) {
 			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/carousel.css');
 		} else {
-			$this->document->addStyle('catalog/view/theme/default/stylesheet/carousel.css');
+			$this->document->addStyle('catalog/view/theme/template/stylesheet/carousel.css');
 		}
 						
 		$this->data['limit'] = $setting['limit'];
@@ -36,7 +36,7 @@ class ControllerModuleCarousel extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/carousel.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/carousel.tpl';
 		} else {
-			$this->template = 'default/template/module/carousel.tpl';
+			$this->template = 'template/template/module/carousel.tpl';
 		}
 		
 		$this->render(); 

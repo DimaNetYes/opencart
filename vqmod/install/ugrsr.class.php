@@ -63,7 +63,7 @@ class UGRSR {
 			DIE('SCRIPT FILENAME COULD NOT BE DETERMINED');
 		}
 		
-		// Set default file protections
+		// Set template file protections
 		$this->resetProtected();
 	}
 	

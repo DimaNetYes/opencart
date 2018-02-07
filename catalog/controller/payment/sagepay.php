@@ -113,7 +113,7 @@ class ControllerPaymentSagepay extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/sagepay.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/sagepay.tpl';
 		} else {
-			$this->template = 'default/template/payment/sagepay.tpl';
+			$this->template = 'template/template/payment/sagepay.tpl';
 		}	
 		
 		$this->render();		

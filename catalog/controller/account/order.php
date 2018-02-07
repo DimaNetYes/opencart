@@ -132,7 +132,7 @@ class ControllerAccountOrder extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/order_list.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/order_list.tpl';
 		} else {
-			$this->template = 'default/template/account/order_list.tpl';
+			$this->template = 'template/template/account/order_list.tpl';
 		}
 		
 		$this->children = array(
@@ -374,7 +374,7 @@ class ControllerAccountOrder extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/order_info.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/account/order_info.tpl';
 			} else {
-				$this->template = 'default/template/account/order_info.tpl';
+				$this->template = 'template/template/account/order_info.tpl';
 			}
 			
 			$this->children = array(
@@ -427,7 +427,7 @@ class ControllerAccountOrder extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
 			} else {
-				$this->template = 'default/template/error/not_found.tpl';
+				$this->template = 'template/template/error/not_found.tpl';
 			}
 			
 			$this->children = array(

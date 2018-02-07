@@ -42,10 +42,10 @@ function error(msg) {
 }
 
 if (navigator.geolocation) {
-	$("input[name='city']").after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
-	$("input[name='postcode']").after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
-	$('select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
-	$('select[name=\'zone_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+	$("input[name='city']").after('<span class="wait">&nbsp;<img src="catalog/view/theme/template/image/loading.gif" alt="" /></span>');
+	$("input[name='postcode']").after('<span class="wait">&nbsp;<img src="catalog/view/theme/template/image/loading.gif" alt="" /></span>');
+	$('select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/template/image/loading.gif" alt="" /></span>');
+	$('select[name=\'zone_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/template/image/loading.gif" alt="" /></span>');
 	navigator.geolocation.getCurrentPosition(success, error,
 		{ enableHighAccuracy: false });
 } else {

@@ -137,7 +137,7 @@ class ControllerAccountEdit extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/edit.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/edit.tpl';
 		} else {
-			$this->template = 'default/template/account/edit.tpl';
+			$this->template = 'template/template/account/edit.tpl';
 		}
 		
 		$this->children = array(

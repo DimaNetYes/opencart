@@ -10,7 +10,7 @@ class ControllerModuleWelcome extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/welcome.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/welcome.tpl';
 		} else {
-			$this->template = 'default/template/module/welcome.tpl';
+			$this->template = 'template/template/module/welcome.tpl';
 		}
 		
 		$this->render();

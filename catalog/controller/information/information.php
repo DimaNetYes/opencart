@@ -51,7 +51,7 @@ class ControllerInformationInformation extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/information.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/information/information.tpl';
 			} else {
-				$this->template = 'default/template/information/information.tpl';
+				$this->template = 'template/template/information/information.tpl';
 			}
 			
 			$this->children = array(
@@ -84,7 +84,7 @@ class ControllerInformationInformation extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
 			} else {
-				$this->template = 'default/template/error/not_found.tpl';
+				$this->template = 'template/template/error/not_found.tpl';
 			}
 			
 			$this->children = array(

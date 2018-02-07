@@ -40,7 +40,7 @@ $_['entry_currency']               = 'Currency:';
 $_['entry_catalog_limit'] 	       = 'Default Items Per Page (Catalog):<br /><span class="help">Determines how many catalog items are shown per page (products, categories, etc)</span>';
 $_['entry_tax']                    = 'Display Prices With Tax:';
 $_['entry_tax_default']            = 'Use Store Tax Address:<br /><span class="help">Use the store address to calculate taxes if no one is logged in. You can choose to use the store address for the customers shipping or payment address.</span>';
-$_['entry_tax_customer']           = 'Use Customer Tax Address:<br /><span class="help">Use the customers default address when they login to calculate taxes. You can choose to use the default address for the customers shipping or payment address.</span>';
+$_['entry_tax_customer']           = 'Use Customer Tax Address:<br /><span class="help">Use the customers template address when they login to calculate taxes. You can choose to use the template address for the customers shipping or payment address.</span>';
 $_['entry_customer_group']         = 'Customer Group:<br /><span class="help">Default customer group.</span>';
 $_['entry_customer_group_display'] = 'Customer Groups:<br /><span class="help">Display customer groups that new customers can select to use such as wholesale and business when signing up.</span>';
 $_['entry_customer_price']         = 'Login Display Prices:<br /><span class="help">Only show prices when a customer is logged in.</span>';
@@ -48,7 +48,7 @@ $_['entry_account']                = 'Account Terms:<br /><span class="help">For
 $_['entry_cart_weight']            = 'Display Weight on Cart Page:';
 $_['entry_guest_checkout']         = 'Guest Checkout:<br /><span class="help">Allow customers to checkout without creating an account. This will not be available when a downloadable product is in the shopping cart.</span>';
 $_['entry_checkout']               = 'Checkout Terms:<br /><span class="help">Forces people to agree to terms before an a customer can checkout.</span>';
-$_['entry_order_status']           = 'Order Status:<br /><span class="help">Set the default order status when an order is processed.</span>';
+$_['entry_order_status']           = 'Order Status:<br /><span class="help">Set the template order status when an order is processed.</span>';
 $_['entry_stock_display']          = 'Display Stock:<br /><span class="help">Display stock quantity on the product page.</span>';
 $_['entry_stock_checkout']         = 'Stock Checkout:<br /><span class="help">Allow customers to still checkout if the products they are ordering are not in stock.</span>';
 $_['entry_logo']                   = 'Store Logo:';
@@ -75,7 +75,7 @@ $_['error_telephone']              = 'Telephone must be between 3 and 32 charact
 $_['error_url']                    = 'Store URL required!';
 $_['error_title']                  = 'Title must be between 3 and 32 characters!';
 $_['error_limit']       	       = 'Limit required!';
-$_['error_customer_group_display'] = 'You must include the default customer group if you are going to use this feature!';
+$_['error_customer_group_display'] = 'You must include the template customer group if you are going to use this feature!';
 $_['error_image_thumb']            = 'Product Image Thumb Size dimensions required!';
 $_['error_image_popup']            = 'Product Image Popup Size dimensions required!';
 $_['error_image_product']          = 'Product List Size dimensions required!';
@@ -85,6 +85,6 @@ $_['error_image_related']          = 'Related Product Image Size dimensions requ
 $_['error_image_compare']          = 'Compare Image Size dimensions required!';
 $_['error_image_wishlist']         = 'Wish List Image Size dimensions required!';
 $_['error_image_cart']             = 'Cart Image Size dimensions required!';
-$_['error_default']                = 'Warning: You can not delete your default store!';
+$_['error_default']                = 'Warning: You can not delete your template store!';
 $_['error_store']                  = 'Warning: This Store cannot be deleted as it is currently assigned to %s orders!';
 ?>

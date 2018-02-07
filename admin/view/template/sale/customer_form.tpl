@@ -421,7 +421,7 @@ function addAddress() {
     html += '    </tr>';
 	html += '    <tr>';
     html += '      <td><?php echo $entry_default; ?></td>';
-    html += '      <td><input type="radio" name="address[' + address_row + '][default]" value="1" /></td>';
+    html += '      <td><input type="radio" name="address[' + address_row + '][template]" value="1" /></td>';
     html += '    </tr>';
     html += '  </table>';
     html += '</div>';

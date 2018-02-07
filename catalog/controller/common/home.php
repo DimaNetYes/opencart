@@ -9,7 +9,7 @@ class ControllerCommonHome extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/home.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/home.tpl';
 		} else {
-			$this->template = 'default/template/common/home.tpl';
+			$this->template = 'template/template/common/home.tpl';
 		}
 		
 		$this->children = array(

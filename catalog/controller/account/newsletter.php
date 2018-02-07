@@ -60,7 +60,7 @@ class ControllerAccountNewsletter extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/newsletter.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/newsletter.tpl';
 		} else {
-			$this->template = 'default/template/account/newsletter.tpl';
+			$this->template = 'template/template/account/newsletter.tpl';
 		}
 		
 		$this->children = array(

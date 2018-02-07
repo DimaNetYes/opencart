@@ -159,7 +159,7 @@
 				tree_component.drag_drop.drag_node	= false;
 			}
 			else {
-				tree_component.drag_drop.drag_help	= $("<div id='jstree-dragged' class='tree tree-default'><ul><li class='last dragged foreign'><a href='#'><ins>&nbsp;</ins>" + opts.str + "</a></li></ul></div>");
+				tree_component.drag_drop.drag_help	= $("<div id='jstree-dragged' class='tree tree-template'><ul><li class='last dragged foreign'><a href='#'><ins>&nbsp;</ins>" + opts.str + "</a></li></ul></div>");
 				tree_component.drag_drop.drag_node	= tree_component.drag_drop.drag_help.find("li:eq(0)");
 			}
 			if($.tree.drag_start !== false) $.tree.drag_start.call(null, false);
@@ -1508,7 +1508,7 @@
 
 				this.container.unbind(".jstree");
 				$("#" + this.container.attr("id")).die("click.jstree").die("dblclick.jstree").die("mouseover.jstree").die("mouseout.jstree").die("mousedown.jstree");
-				this.container.removeClass("tree ui-widget ui-widget-content tree-default tree-" + this.settings.ui.theme_name).children("ul").removeClass("no_dots ltr locked").find("li").removeClass("leaf").removeClass("open").removeClass("closed").removeClass("last").children("a").removeClass("clicked hover search");
+				this.container.removeClass("tree ui-widget ui-widget-content tree-template tree-" + this.settings.ui.theme_name).children("ul").removeClass("no_dots ltr locked").find("li").removeClass("leaf").removeClass("open").removeClass("closed").removeClass("last").children("a").removeClass("clicked hover search");
 
 				if(this.cntr == tree_component.focused) {
 					for(var i in tree_component.inst) {
@@ -1814,7 +1814,7 @@
 })(jQuery);
 
 // Datastores
-// HTML and JSON are included here by default
+// HTML and JSON are included here by template
 (function ($) {
 	$.extend($.tree.datastores, {
 		"html" : function () {

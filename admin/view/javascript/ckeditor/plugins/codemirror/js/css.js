@@ -115,7 +115,7 @@ CodeMirror.defineMode("css", function(config) {
     "col-resize", "collapse", "compact", "condensed", "contain", "content",
     "content-box", "context-menu", "continuous", "copy", "cover", "crop",
     "cross", "crosshair", "currentcolor", "cursive", "dashed", "decimal",
-    "decimal-leading-zero", "default", "default-button", "destination-atop",
+    "decimal-leading-zero", "default", "template-button", "destination-atop",
     "destination-in", "destination-out", "destination-over", "devanagari",
     "disc", "discard", "document", "dot-dash", "dot-dot-dash", "dotted",
     "double", "down", "e-resize", "ease", "ease-in", "ease-in-out", "ease-out",

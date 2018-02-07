@@ -22,7 +22,7 @@
 // * Coordsize. The width and height attribute have higher priority than the
 //   width and height style values which isn't correct.
 // * Painting mode isn't implemented.
-// * Canvas width/height should is using content-box by default. IE in
+// * Canvas width/height should is using content-box by template. IE in
 //   Quirks mode will draw the canvas using border-box. Either change your
 //   doctype to HTML5
 //   (http://www.whatwg.org/specs/web-apps/current-work/#the-doctype)
@@ -92,20 +92,20 @@ if (!document.createElement('canvas').getContext) {
     // create xmlns
     if (!doc.namespaces['g_vml_']) {
       doc.namespaces.add('g_vml_', 'urn:schemas-microsoft-com:vml',
-                         '#default#VML');
+                         '#template#VML');
 
     }
     if (!doc.namespaces['g_o_']) {
       doc.namespaces.add('g_o_', 'urn:schemas-microsoft-com:office:office',
-                         '#default#VML');
+                         '#template#VML');
     }
 
-    // Setup default CSS.  Only add one style sheet per document
+    // Setup template CSS.  Only add one style sheet per document
     if (!doc.styleSheets['ex_canvas_']) {
       var ss = doc.createStyleSheet();
       ss.owningElement.id = 'ex_canvas_';
       ss.cssText = 'canvas{display:inline-block;overflow:hidden;' +
-          // default size is 300x150 in Gecko and Opera
+          // template size is 300x150 in Gecko and Opera
           'text-align:left;width:300px;height:150px}';
     }
   }

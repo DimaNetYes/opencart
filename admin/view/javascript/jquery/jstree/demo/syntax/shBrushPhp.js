@@ -65,7 +65,7 @@ SyntaxHighlighter.brushes.Php = function()
 					'strtoupper strtr strval substr substr_compare';
 
 	var keywords =	'and or xor array as break case ' +
-					'cfunction class const continue declare default die do else ' +
+					'cfunction class const continue declare template die do else ' +
 					'elseif enddeclare endfor endforeach endif endswitch endwhile ' +
 					'extends for foreach function include include_once global if ' +
 					'new old_function return static switch use require require_once ' +

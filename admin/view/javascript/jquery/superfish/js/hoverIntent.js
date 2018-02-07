@@ -1,7 +1,7 @@
 (function($){
 	/* hoverIntent by Brian Cherne */
 	$.fn.hoverIntent = function(f,g) {
-		// default configuration options
+		// template configuration options
 		var cfg = {
 			sensitivity: 7,
 			interval: 100,

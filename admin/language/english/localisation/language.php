@@ -13,7 +13,7 @@ $_['column_action']     = 'Action';
 
 // Entry
 $_['entry_name']        = 'Language Name:';
-$_['entry_code']        = 'Code:<br /><span class="help">eg: en. Do not change if this is your default language.</span>';
+$_['entry_code']        = 'Code:<br /><span class="help">eg: en. Do not change if this is your template language.</span>';
 $_['entry_locale']      = 'Locale:<br /><span class="help">eg: en_US.UTF-8,en_US,en-gb,en_gb,english</span>';
 $_['entry_image']       = 'Image:<br /><span class="help">eg: gb.png</span>';
 $_['entry_directory']   = 'Directory:<br /><span class="help">name of the language directory (case-sensitive)</span>';
@@ -29,7 +29,7 @@ $_['error_locale']      = 'Locale required!';
 $_['error_image']       = 'Image Filename must be between 3 and 64 characters!';
 $_['error_directory']   = 'Directory required!';
 $_['error_filename']    = 'Filename must be between 3 and 64 characters!';
-$_['error_default']     = 'Warning: This language cannot be deleted as it is currently assigned as the default store language!';
+$_['error_default']     = 'Warning: This language cannot be deleted as it is currently assigned as the template store language!';
 $_['error_admin']       = 'Warning: This Language cannot be deleted as it is currently assigned as the administration language!';
 $_['error_store']       = 'Warning: This language cannot be deleted as it is currently assigned to %s stores!';
 $_['error_order']       = 'Warning: This language cannot be deleted as it is currently assigned to %s orders!';

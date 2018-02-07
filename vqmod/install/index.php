@@ -12,7 +12,7 @@
  * This file will perform all necessary file alterations for the
  * OpenCart index.php files both in the root directory and in the
  * Administration folder. Please note that if you have changed your
- * default folder name from admin to something else, you will need
+ * template folder name from admin to something else, you will need
  * to edit the admin/index.php in this file to install successfully
  *
  * @license

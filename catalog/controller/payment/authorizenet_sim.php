@@ -56,7 +56,7 @@ class ControllerPaymentAuthorizeNetSim extends Controller {
 		 * HMAC-MD5  hash from the merchant's transaction key and 
 		 * concatenation of the values for "x_login", "x_fp_sequence", 
 		 * "x_fp_timestamp", "x_amount", and (if given) "x_currency_code" 
-		 * – all separated by the  "^" character. Note that if 
+		 * ï¿½ all separated by the  "^" character. Note that if 
 		 * "x_currency_code" is not present, then a "^" character is still 
 		 * added. The transaction key is generated within the payment page 
 		 * configuration section of the Administration console tab, 
@@ -126,7 +126,7 @@ class ControllerPaymentAuthorizeNetSim extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/authorizenet_sim_index.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/authorizenet_sim_index.tpl';
 		} else {
-			$this->template = 'default/template/payment/authorizenet_sim_index.tpl';
+			$this->template = 'template/template/payment/authorizenet_sim_index.tpl';
 		}	
 		
 		$this->render();	
@@ -227,7 +227,7 @@ class ControllerPaymentAuthorizeNetSim extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/authorizenet_sim_callback.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/authorizenet_sim_callback.tpl';
 		} else {
-			$this->template = 'default/template/payment/authorizenet_sim_callback.tpl';
+			$this->template = 'template/template/payment/authorizenet_sim_callback.tpl';
 		}	
 
 		$this->render();

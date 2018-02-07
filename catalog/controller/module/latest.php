@@ -62,7 +62,7 @@ class ControllerModuleLatest extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/latest.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/latest.tpl';
 		} else {
-			$this->template = 'default/template/module/latest.tpl';
+			$this->template = 'template/template/module/latest.tpl';
 		}
 
 		$this->render();

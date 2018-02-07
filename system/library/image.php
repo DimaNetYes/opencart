@@ -57,8 +57,8 @@ class Image {
 	*	
 	*	@param width 
 	*	@param height
-	*	@param default char [default, w, h]
-	*				   default = scale with white space, 
+	*	@param template char [template, w, h]
+	*				   template = scale with white space, 
 	*				   w = fill according to width, 
 	*				   h = fill according to height
 	*	

@@ -222,7 +222,7 @@ class ControllerAccountAddress extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/address_list.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/address_list.tpl';
 		} else {
-			$this->template = 'default/template/account/address_list.tpl';
+			$this->template = 'template/template/account/address_list.tpl';
 		}
 		
 		$this->children = array(
@@ -468,12 +468,12 @@ class ControllerAccountAddress extends Controller {
 		
     	$this->data['countries'] = $this->model_localisation_country->getCountries();
 
-    	if (isset($this->request->post['default'])) {
-      		$this->data['default'] = $this->request->post['default'];
+    	if (isset($this->request->post['template'])) {
+      		$this->data['template'] = $this->request->post['template'];
     	} elseif (isset($this->request->get['address_id'])) {
-      		$this->data['default'] = $this->customer->getAddressId() == $this->request->get['address_id'];
+      		$this->data['template'] = $this->customer->getAddressId() == $this->request->get['address_id'];
     	} else {
-			$this->data['default'] = false;
+			$this->data['template'] = false;
 		}
 
     	$this->data['back'] = $this->url->link('account/address', '', 'SSL');
@@ -481,7 +481,7 @@ class ControllerAccountAddress extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/address_form.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/address_form.tpl';
 		} else {
-			$this->template = 'default/template/account/address_form.tpl';
+			$this->template = 'template/template/account/address_form.tpl';
 		}
 		
 		$this->children = array(

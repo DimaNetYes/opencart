@@ -89,7 +89,7 @@ class ControllerAffiliateForgotten extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/affiliate/forgotten.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/affiliate/forgotten.tpl';
 		} else {
-			$this->template = 'default/template/affiliate/forgotten.tpl';
+			$this->template = 'template/template/affiliate/forgotten.tpl';
 		}
 		
 		$this->children = array(

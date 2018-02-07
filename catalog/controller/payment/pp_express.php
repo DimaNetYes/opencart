@@ -22,7 +22,7 @@ class ControllerPaymentPPExpress extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_express.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/pp_express.tpl';
 		} else {
-			$this->template = 'default/template/payment/pp_express.tpl';
+			$this->template = 'template/template/payment/pp_express.tpl';
 		}	
 
 		$this->render();		

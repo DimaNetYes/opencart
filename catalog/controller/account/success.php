@@ -48,7 +48,7 @@ class ControllerAccountSuccess extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/success.tpl';
 		} else {
-			$this->template = 'default/template/common/success.tpl';
+			$this->template = 'template/template/common/success.tpl';
 		}
 		
 		$this->children = array(

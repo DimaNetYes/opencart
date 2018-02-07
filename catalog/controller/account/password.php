@@ -84,7 +84,7 @@ class ControllerAccountPassword extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/password.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/password.tpl';
 		} else {
-			$this->template = 'default/template/account/password.tpl';
+			$this->template = 'template/template/account/password.tpl';
 		}
 		
 		$this->children = array(

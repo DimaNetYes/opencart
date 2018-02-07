@@ -20,7 +20,7 @@ button.ui-button-icons-only { width: 3.7em; }
 .ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 1em .4em 2.1em; }
 .ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
 .ui-button-text-icons .ui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
-/* no icon support for input elements, provide padding by default */
+/* no icon support for input elements, provide padding by template */
 input.ui-button { padding: .4em 1em; }
 
 /*button icon element(s) */

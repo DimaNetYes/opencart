@@ -373,7 +373,7 @@ $('#button-cart').bind('click', function() {
 			} 
 			
 			if (json['success']) {
-				$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
+				$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/template/image/close.png" alt="" class="close" /></div>');
 					
 				$('.success').fadeIn('slow');
 					
@@ -396,7 +396,7 @@ new AjaxUpload('#button-option-<?php echo $option['product_option_id']; ?>', {
 	autoSubmit: true,
 	responseType: 'json',
 	onSubmit: function(file, extension) {
-		$('#button-option-<?php echo $option['product_option_id']; ?>').after('<img src="catalog/view/theme/default/image/loading.gif" class="loading" style="padding-left: 5px;" />');
+		$('#button-option-<?php echo $option['product_option_id']; ?>').after('<img src="catalog/view/theme/template/image/loading.gif" class="loading" style="padding-left: 5px;" />');
 		$('#button-option-<?php echo $option['product_option_id']; ?>').attr('disabled', true);
 	},
 	onComplete: function(file, json) {
@@ -443,7 +443,7 @@ $('#button-review').bind('click', function() {
 		beforeSend: function() {
 			$('.success, .warning').remove();
 			$('#button-review').attr('disabled', true);
-			$('#review-title').after('<div class="attention"><img src="catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
+			$('#review-title').after('<div class="attention"><img src="catalog/view/theme/template/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
 		},
 		complete: function() {
 			$('#button-review').attr('disabled', false);

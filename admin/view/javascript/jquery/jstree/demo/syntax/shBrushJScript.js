@@ -30,7 +30,7 @@
 SyntaxHighlighter.brushes.JScript = function()
 {
 	var keywords =	'break case catch continue ' +
-					'default delete do else false  ' +
+					'template delete do else false  ' +
 					'for function if in instanceof ' +
 					'new null return super switch ' +
 					'this throw true try typeof var while with'

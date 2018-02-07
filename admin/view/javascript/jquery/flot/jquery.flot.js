@@ -47,9 +47,9 @@
                     noColumns: 1, // number of colums in legend table
                     labelFormatter: null, // fn: string -> string
                     labelBoxBorderColor: "#ccc", // border color for the little label boxes
-                    container: null, // container (as jQuery object) to put legend in, null means default on top of graph
-                    position: "ne", // position of default legend container within plot
-                    margin: 5, // distance from grid edge to default legend container within plot
+                    container: null, // container (as jQuery object) to put legend in, null means template on top of graph
+                    position: "ne", // position of template legend container within plot
+                    margin: 5, // distance from grid edge to template legend container within plot
                     backgroundColor: null, // null means auto-detect
                     backgroundOpacity: 0.85 // set to 0 to avoid background
                 },
@@ -328,7 +328,7 @@
             if (typeof a == "object") // if we got a real axis, extract number
                 a = a.n;
             if (typeof a != "number")
-                a = 1; // default to first axis
+                a = 1; // template to first axis
             return a;
         }
 
@@ -997,7 +997,7 @@
             $.each(axes, function (_, axis) {
                 axis.show = axis.options.show;
                 if (axis.show == null)
-                    axis.show = axis.used; // by default an axis is visible if it's got data
+                    axis.show = axis.used; // by template an axis is visible if it's got data
                 
                 axis.reserveSpace = axis.show || axis.options.reserveSpace;
 

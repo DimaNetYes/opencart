@@ -66,7 +66,7 @@ class ControllerPaymentPaypoint extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/paypoint.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/paypoint.tpl';
 		} else {
-			$this->template = 'default/template/payment/paypoint.tpl';
+			$this->template = 'template/template/payment/paypoint.tpl';
 		}
 
 		$this->render();
@@ -150,7 +150,7 @@ class ControllerPaymentPaypoint extends Controller {
 				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/paypoint_success.tpl')) {
 					$this->template = $this->config->get('config_template') . '/template/payment/paypoint_success.tpl';
 				} else {
-					$this->template = 'default/template/payment/paypoint_success.tpl';
+					$this->template = 'template/template/payment/paypoint_success.tpl';
 				}
 	
 				$this->children = array(
@@ -169,7 +169,7 @@ class ControllerPaymentPaypoint extends Controller {
 				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/paypoint_failure.tpl')) {
 					$this->template = $this->config->get('config_template') . '/template/payment/paypoint_failure.tpl';
 				} else {
-					$this->template = 'default/template/payment/paypoint_failure.tpl';
+					$this->template = 'template/template/payment/paypoint_failure.tpl';
 				}
 	
 				$this->children = array(

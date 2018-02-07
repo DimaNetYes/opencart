@@ -65,7 +65,7 @@ class ControllerCheckoutShippingAddress extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/shipping_address.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/checkout/shipping_address.tpl';
 		} else {
-			$this->template = 'default/template/checkout/shipping_address.tpl';
+			$this->template = 'template/template/checkout/shipping_address.tpl';
 		}
 				
 		$this->response->setOutput($this->render());

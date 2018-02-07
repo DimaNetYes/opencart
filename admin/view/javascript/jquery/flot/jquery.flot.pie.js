@@ -699,7 +699,7 @@ More detail and specific examples can be found in the included HTML file.
 		
 	} // end init (plugin body)
 	
-	// define pie specific options and their default values
+	// define pie specific options and their template values
 	var options = {
 		series: {
 			pie: {

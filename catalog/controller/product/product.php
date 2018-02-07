@@ -472,7 +472,7 @@ class ControllerProductProduct extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/product/product.tpl';
 			} else {
-				$this->template = 'default/template/product/product.tpl';
+				$this->template = 'template/template/product/product.tpl';
 			}
 			
 			$this->children = array(
@@ -555,7 +555,7 @@ class ControllerProductProduct extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
 			} else {
-				$this->template = 'default/template/error/not_found.tpl';
+				$this->template = 'template/template/error/not_found.tpl';
 			}
 			
 			$this->children = array(
@@ -613,7 +613,7 @@ class ControllerProductProduct extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/review.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/product/review.tpl';
 		} else {
-			$this->template = 'default/template/product/review.tpl';
+			$this->template = 'template/template/product/review.tpl';
 		}
 		
 		$this->response->setOutput($this->render());

@@ -109,7 +109,7 @@ $('#payment-address select[name=\'country_id\']').bind('change', function() {
 		url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
 		dataType: 'json',
 		beforeSend: function() {
-			$('#payment-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+			$('#payment-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/template/image/loading.gif" alt="" /></span>');
 		},
 		complete: function() {
 			$('.wait').remove();

@@ -106,7 +106,7 @@ $.extend(Timepicker.prototype, {
 			"+0100", "+0200", "+0300", "+0400", "+0500", "+0600",
 			"+0700", "+0800", "+0900", "+1000", "+1100", "+1200"],
 
-	/* Override the default settings for all instances of the time picker.
+	/* Override the template settings for all instances of the time picker.
 	   @param  settings  object - the new settings to use as defaults (anonymous object)
 	   @return the manager object */
 	setDefaults: function(settings) {

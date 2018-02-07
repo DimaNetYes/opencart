@@ -245,7 +245,7 @@ class ControllerAffiliateEdit extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/affiliate/edit.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/affiliate/edit.tpl';
 		} else {
-			$this->template = 'default/template/affiliate/edit.tpl';
+			$this->template = 'template/template/affiliate/edit.tpl';
 		}
 		
 		$this->children = array(
