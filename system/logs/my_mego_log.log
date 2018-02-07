@@ -202,3 +202,46 @@
 2018-02-06 17:18:12 - PHP Notice:  Undefined variable: discount in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
 2018-02-06 17:22:53 - PHP Notice:  Array to string conversion in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
 2018-02-06 17:23:00 - PHP Notice:  Undefined index: all in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 10:35:47 - PHP Notice:  Use of undefined constant console - assumed 'console' in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1733
+2018-02-07 10:35:47 - PHP Warning:  log() expects parameter 1 to be double, object given in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1733
+2018-02-07 10:35:57 - PHP Notice:  Use of undefined constant console - assumed 'console' in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1733
+2018-02-07 10:35:57 - PHP Warning:  log() expects parameter 1 to be double, object given in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1733
+2018-02-07 10:36:18 - PHP Notice:  Use of undefined constant console - assumed 'console' in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1733
+2018-02-07 10:36:18 - PHP Warning:  log() expects parameter 1 to be double, string given in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1733
+2018-02-07 10:38:22 - PHP Notice:  Undefined index: file in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 355
+2018-02-07 10:38:24 - PHP Notice:  Undefined index: file in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 355
+2018-02-07 10:45:22 - PHP Notice:  Undefined index: price in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 356
+2018-02-07 10:45:36 - PHP Notice:  Undefined offset: 1 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 356
+2018-02-07 10:47:59 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 10:51:54 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 10:55:30 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:56:02 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:56:04 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:56:16 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:56:16 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:56:17 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:56:22 - PHP Notice:  Undefined variable: number in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 359
+2018-02-07 10:56:23 - PHP Notice:  Undefined variable: number in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 359
+2018-02-07 10:56:35 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 10:56:36 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 10:56:38 - PHP Notice:  Undefined variable: number in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 359
+2018-02-07 10:57:01 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:57:19 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:57:20 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 357
+2018-02-07 10:58:26 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 358
+2018-02-07 10:58:27 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 358
+2018-02-07 10:58:28 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 358
+2018-02-07 10:58:41 - PHP Notice:  Undefined variable: number in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 361
+2018-02-07 10:59:01 - PHP Notice:  Undefined variable: number in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 361
+2018-02-07 10:59:08 - PHP Notice:  Undefined variable: number in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 361
+2018-02-07 10:59:54 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 10:59:55 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 11:00:09 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 359
+2018-02-07 11:00:10 - PHP Notice:  Undefined offset: 0 in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 359
+2018-02-07 11:00:14 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 11:00:16 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 11:01:34 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 11:01:49 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 11:02:02 - PHP Notice:  Undefined variable: file in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 14
+2018-02-07 11:04:47 - PHP Notice:  Undefined index: options in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 369
+2018-02-07 11:04:48 - PHP Notice:  Undefined index: options in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 369

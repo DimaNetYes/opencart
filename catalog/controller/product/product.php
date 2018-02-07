@@ -353,7 +353,21 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 
-            $this->data['file'] = "../../../../image/data/".$product_info['jan'];
+
+			 		            //проверка на скидку
+if(!empty($this->data['discounts'])) {
+    $number = substr($this->data['discounts'][0]['price'], 1);
+    if($number > 0) {
+        $this->data['file'] = "../../../../image/data/" . $product_info['jan'];
+    }else{
+        $this->data['file'] = "image/data/" . $product_info['jan'];
+    }
+}else{
+    $this->data['file'] = "image/data/" . $product_info['jan'];
+}
+
+
+
 
 			$this->data['options'] = array();
 
