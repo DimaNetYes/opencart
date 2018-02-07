@@ -115,9 +115,9 @@
                         <!--  download imageManager  -->
               <tr>
               <td><?php echo $entry_image_sales; ?></td>
-              <td><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
+              <td><div class="image_sales"><img src="<?php echo $thumb2; ?>" alt="" id="thumb2" /><br />
                   <input type="hidden" name="image_sales" value="<?php echo $image_sales; ?>" id="image_sales" />
-                  <a onclick="image_upload('image_sales', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', 'no_image.jpg');"><?php echo $text_clear; ?></a></div></td>
+                  <a onclick="image_upload('image_sales', 'thumb2');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb2').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', 'no_image.jpg');"><?php echo $text_clear; ?></a></div></td>
             </tr>
 
 
@@ -1142,7 +1142,7 @@ function addOptionValue(option_row) {
 	html += '    <td class="left"><a onclick="$(\'#option-value-row' + option_value_row + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
 	html += '  </tr>';
 	html += '</tbody>';
-	
+
 	$('#option-value' + option_row + ' tfoot').before(html);
 
 	option_value_row++;
@@ -1228,6 +1228,7 @@ function image_upload(field, thumb) {
 	});
 };
 //--></script>
+
 <script type="text/javascript"><!--
 var image_row = <?php echo $image_row; ?>;
 

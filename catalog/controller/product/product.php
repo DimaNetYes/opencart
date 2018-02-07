@@ -164,9 +164,12 @@ class ControllerProductProduct extends Controller {
 		$product_info = $this->model_catalog_product->getProduct($product_id);
                         //высчитываем скидку
         $products_discount =  $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
+        $products_discount_current = $this->data['products_discount_current'] = $product_info['products_discount']; //текущий
 
                         //imageSales
-        $image_sales = $this->data['image_sales'] = "../../image/". $product_info['image_sales'];
+        if($product_info['products_discount'] > 0) {
+            $image_sales = $this->data['image_sales'] = "../../image/" . $product_info['image_sales'];
+        }
 
 		if ($product_info) {
 			$url = '';

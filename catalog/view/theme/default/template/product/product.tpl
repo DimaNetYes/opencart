@@ -1,4 +1,13 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
+<style type="text/css">
+  #imageSale2 {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    position: absolute;
+  }
+</style>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -11,11 +20,15 @@
       <?php if ($thumb) { ?>
       <div class="image">
         <!-- скидка -->
-        <?php  ?> <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox2"> <img src="<?php echo $image_sales; ?>" title="<?php echo $image_sales; ?>" alt="<?php echo $image_sales; ?>" id="imageSale" /> </a> <?php } ?>
-        <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" />
-       </a>
+        <?php if(isset($image_sales)) { ?> <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
+                                              class="colorbox2"> <img src="<?php echo $image_sales; ?>" id="imageSale"/>
+        </a> <?php } ?>
+        <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img
+                  src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"
+                  id="image"/>
+        </a>
       </div>
-      <?php  ?>
+      <?php } ?>
 
 
       <?php if ($images) { ?>
@@ -47,11 +60,13 @@
         <?php } ?>
         <br />
 
+        <?php if ($products_discount_current > 0) { ?>
         <tr>
           <td><b><?php echo $text_products_discount; ?></b></td>
-          <td><?php echo "\$".$products_discount; ?></td>
+          <td><?php echo "\$".$products_discount; ?><img src="<?php echo $image_sales; ?>" id="imageSale2"/></td>
         </tr>
 <br>
+        <?php } ?>
 
         <?php if ($tax) { ?>
         <span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span><br />
