@@ -766,3 +766,38 @@
 2018-02-07 18:04:50 - PHP Notice:  Undefined index: sales_w in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1161
 2018-02-07 18:04:50 - PHP Notice:  Undefined index: sales_h in D:\OSPanel\domains\ocs\admin\controller\catalog\product.php on line 1169
 2018-02-07 18:48:17 - PHP Notice:  Undefined variable: sales_wpx in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 25
+2018-02-07 22:12:38 - PHP Notice:  Undefined index: products_discount_current in D:\OSPanel\domains\ocs\catalog\model\catalog\product.php on line 57
+2018-02-07 22:12:40 - PHP Notice:  Undefined index: products_discount_current in D:\OSPanel\domains\ocs\catalog\model\catalog\product.php on line 57
+2018-02-07 22:12:47 - PHP Notice:  Undefined index: product_discount_current in D:\OSPanel\domains\ocs\catalog\model\catalog\product.php on line 57
+2018-02-07 22:14:20 - PHP Notice:  Undefined index: products_discount_current in D:\OSPanel\domains\ocs\catalog\model\catalog\product.php on line 57
+2018-02-07 22:14:22 - PHP Notice:  Undefined index: products_discount_current in D:\OSPanel\domains\ocs\catalog\model\catalog\product.php on line 57
+2018-02-07 22:19:05 - PHP Notice:  Undefined variable: taxы in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 79
+2018-02-07 22:23:31 - PHP Notice:  Undefined variable: products_discount_current in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 61
+2018-02-07 22:23:34 - PHP Notice:  Undefined variable: products_discount_current in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 61
+2018-02-07 22:32:01 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 69
+2018-02-07 22:42:55 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 64
+2018-02-07 22:42:56 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 64
+2018-02-07 22:44:50 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 68
+2018-02-07 22:44:51 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 68
+2018-02-07 22:44:52 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 68
+2018-02-07 22:44:53 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 68
+2018-02-07 22:44:54 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 68
+2018-02-07 22:44:55 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 68
+2018-02-07 22:45:29 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 68
+2018-02-07 22:47:52 - PHP Notice:  Undefined index: secial in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 355
+2018-02-07 22:47:53 - PHP Notice:  Undefined index: secial in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 355
+2018-02-07 22:49:18 - PHP Notice:  Undefined variable: tax in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 77
+2018-02-07 22:49:25 - PHP Notice:  Undefined variable: special in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 69
+2018-02-07 22:49:26 - PHP Notice:  Undefined variable: special in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 69
+2018-02-07 22:50:15 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71
+2018-02-07 22:58:27 - PHP Notice:  Undefined index: tax in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 353
+2018-02-07 22:58:29 - PHP Notice:  Undefined index: tax in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 353
+2018-02-07 23:02:26 - PHP Warning:  substr() expects at least 2 parameters, 1 given in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 356
+2018-02-07 23:02:33 - PHP Warning:  substr() expects at least 2 parameters, 1 given in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 356
+2018-02-07 23:02:34 - PHP Warning:  substr() expects at least 2 parameters, 1 given in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 356
+2018-02-07 23:03:36 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71
+2018-02-07 23:03:37 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71
+2018-02-07 23:04:10 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71
+2018-02-07 23:05:26 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71
+2018-02-07 23:06:10 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71
+2018-02-07 23:06:11 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71

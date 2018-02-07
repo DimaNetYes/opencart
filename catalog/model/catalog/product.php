@@ -54,7 +54,7 @@ class ModelCatalogProduct extends Model {
 				'manufacturer_id'  => $query->row['manufacturer_id'],
 				'manufacturer'     => $query->row['manufacturer'],
                 'price'            => ($query->row['discount'] ? $query->row['discount'] : $query->row['price']),
-//				'price'            => ($query->row['products_discount'] ? $query->row['products_discount'] : $query->row['price']),
+//				'price'            => ($query->row['products_discount_current'] ? $query->row['products_discount'] : $query->row['price']),
 				'special'          => $query->row['special'],
 				'reward'           => $query->row['reward'],
 				'points'           => $query->row['points'],

@@ -19,7 +19,7 @@
     <div class="left">
       <?php if ($thumb) { ?>
       <div class="image">
-        <!-- скидка -->
+        <!-- картинка скидка на фото -->
         <?php if(isset($image_sales)) { ?>
         <!--конкатенация-->
         <?php $sales_w.="px";?>
@@ -56,22 +56,23 @@
         <span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
         <?php } ?>
         <span><?php echo $text_stock; ?></span> <?php echo $stock; ?></div>
+
+
+
+
+
+
+
       <?php if ($price) { ?>
       <div class="price"><?php echo $text_price; ?>
+        <!-- картинка скидки возле цены -->
         <?php if (!$special) { ?>
         <?php echo $price; ?>
+        <img src="<?php echo $image_sales; ?>" id="imageSale2" <?php echo "style='width:$sales_w; height:$sales_h'";?> />
         <?php } else { ?>
         <span class="price-old"><?php echo $price; ?></span> <span class="price-new"><?php echo $special; ?></span>
         <?php } ?>
         <br />
-
-        <?php if ($products_discount_current > 0) { ?>
-        <tr>
-          <td><b><?php echo $text_products_discount; ?></b></td>
-          <td><?php echo "\$".$products_discount; ?><img src="<?php echo $image_sales; ?>" id="imageSale2" <?php echo "style='width:$sales_w; height:$sales_h'";?> /></td>
-        </tr>
-<br>
-        <?php } ?>
 
         <?php if ($tax) { ?>
         <span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span><br />

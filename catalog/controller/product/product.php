@@ -78,7 +78,7 @@ class ControllerProductProduct extends Controller {
 				'href'      => $this->url->link('product/manufacturer'),
 				'separator' => $this->language->get('text_separator')
 			);	
-	
+
 			$url = '';
 			
 			if (isset($this->request->get['sort'])) {
@@ -164,7 +164,6 @@ class ControllerProductProduct extends Controller {
 		$product_info = $this->model_catalog_product->getProduct($product_id);
                         //высчитываем скидку
         $products_discount =  $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
-        $products_discount_current = $this->data['products_discount_current'] = $product_info['products_discount']; //текущий
 
                         //imageSales
         if($product_info['products_discount'] > 0) {
@@ -335,26 +334,31 @@ class ControllerProductProduct extends Controller {
 					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height')),
 					'thumb' => $this->model_tool_image->resize($result['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'))
 				);
-			}	
-						
-			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-				$this->data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
-			} else {
-				$this->data['price'] = false;
 			}
+
+                //PRICE DISCOUNT
+            if ($products_discount > 0) {
+                $this->data['price'] = $this->currency->format($this->tax->calculate($products_discount, $product_info['tax_class_id'], $this->config->get('config_tax')));
+            } else if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                $this->data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+            } else {
+                $this->data['price'] = false;
+            }
 						
 			if ((float)$product_info['special']) {
 				$this->data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 			} else {
 				$this->data['special'] = false;
 			}
-			
+
 			if ($this->config->get('config_tax')) {
-				$this->data['tax'] = $this->currency->format((float)$product_info['special'] ? $product_info['special'] : $product_info['price']);
+				$this->data['tax'] = $this->currency->format((float)$product_info['special'] ? $product_info['special'] : $products_discount);
+				if(substr($this->data['tax'], 1) < 0){
+                    $this->data['tax'] = $this->currency->format((float)$product_info['special'] ? $product_info['special'] : $product_info['price']);
+                }
 			} else {
 				$this->data['tax'] = false;
 			}
-
 
 			$discounts = $this->model_catalog_product->getProductDiscounts($this->request->get['product_id']);
 			
