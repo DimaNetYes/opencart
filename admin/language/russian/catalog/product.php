@@ -51,6 +51,7 @@ $_['entry_quantity']         = 'Количество:';
 $_['entry_minimum']          = 'Минимальное количество:<br/><span class="help">Указание минимального количества в заказе</span>';
 $_['entry_stock_status']     = 'Остутствие на складе:<br /><span class="help">Статус, показываемый, когда товара нет на складе</span>';
 $_['entry_price']            = 'Цена:';
+$_['entry_select_discount']       = '% Валюта:';
 $_['entry_image_sales']       = 'Картинка Скидки:';
 $_['entry_sales_w']       = 'Ширина:';
 $_['entry_sales_h']       = 'Высота:';

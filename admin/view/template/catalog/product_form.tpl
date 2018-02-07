@@ -112,6 +112,15 @@
                   <td><input type="text" name="products_discount" value="<?php echo $products_discount; ?>"/></td>
               </tr>
 
+              <tr>
+                  <td><?php echo $entry_select_discount; ?></td>
+                  <td><select name="select_discount">
+                        <option value="1">%</option>
+                          <option value="2">Валюта</option>
+                      </select>
+                  </td>
+              </tr>
+
                         <!--  download imageManager  -->
               <tr>
               <td><?php echo $entry_image_sales; ?></td>
