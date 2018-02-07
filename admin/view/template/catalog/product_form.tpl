@@ -111,7 +111,15 @@
                   <td><?php echo $entry_products_discount; ?></td>
                   <td><input type="text" name="products_discount" value="<?php echo $products_discount; ?>"/></td>
               </tr>
-              
+
+                        <!--  download imageManager  -->
+              <tr>
+              <td><?php echo $entry_image_sales; ?></td>
+              <td><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
+                  <input type="hidden" name="image_sales" value="<?php echo $image_sales; ?>" id="image_sales" />
+                  <a onclick="image_upload('image_sales', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', 'no_image.jpg');"><?php echo $text_clear; ?></a></div></td>
+            </tr>
+
 
             <tr>
               <td><?php echo $entry_tax_class; ?></td>
@@ -126,6 +134,7 @@
                   <?php } ?>
                 </select></td>
             </tr>
+
             <tr>
               <td><?php echo $entry_quantity; ?></td>
               <td><input type="text" name="quantity" value="<?php echo $quantity; ?>" size="5" /></td>
@@ -304,7 +313,7 @@
                   <?php } ?>
                 </div></td>
             </tr>
-              type="form"
+
             <tr>
               <td><?php echo $entry_store; ?></td>
               <td><div class="scrollbox">
@@ -1195,9 +1204,9 @@ function addSpecial() {
 <script type="text/javascript"><!--
 function image_upload(field, thumb) {
 	$('#dialog').remove();
-	
+
 	$('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/filemanager&token=<?php echo $token; ?>&field=' + encodeURIComponent(field) + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
-	
+
 	$('#dialog').dialog({
 		title: '<?php echo $text_image_manager; ?>',
 		close: function (event, ui) {
@@ -1210,7 +1219,7 @@ function image_upload(field, thumb) {
 					}
 				});
 			}
-		},	
+		},
 		bgiframe: false,
 		width: 800,
 		height: 400,
@@ -1218,7 +1227,7 @@ function image_upload(field, thumb) {
 		modal: false
 	});
 };
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 var image_row = <?php echo $image_row; ?>;
 
@@ -1230,13 +1239,13 @@ function addImage() {
 	html += '    <td class="left"><a onclick="$(\'#image-row' + image_row  + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
 	html += '  </tr>';
 	html += '</tbody>';
-	
+
 	$('#images tfoot').before(html);
-	
+
 	image_row++;
 }
-//--></script> 
-<script type="text/javascript" src="view/javascript/jquery/ui/jquery-ui-timepicker-addon.js"></script> 
+//--></script>
+<script type="text/javascript" src="view/javascript/jquery/ui/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript"><!--
 $('.date').datepicker({dateFormat: 'yy-mm-dd'});
 $('.datetime').datetimepicker({
@@ -1244,12 +1253,12 @@ $('.datetime').datetimepicker({
 	timeFormat: 'h:m'
 });
 $('.time').timepicker({timeFormat: 'h:m'});
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
-$('#tabs a').tabs(); 
-$('#languages a').tabs(); 
+$('#tabs a').tabs();
+$('#languages a').tabs();
 $('#vtab-option a').tabs();
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
  $(document).ready(function(){
     $(".hide").hide();

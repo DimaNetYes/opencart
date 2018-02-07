@@ -53,7 +53,6 @@
         </tr>
 <br>
 
-
         <?php if ($tax) { ?>
         <span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span><br />
         <?php } ?>

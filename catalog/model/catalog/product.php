@@ -50,6 +50,7 @@ class ModelCatalogProduct extends Model {
 				'quantity'         => $query->row['quantity'],
 				'stock_status'     => $query->row['stock_status'],
 				'image'            => $query->row['image'],
+				'image_sales'      => $query->row['image_sales'],
 				'manufacturer_id'  => $query->row['manufacturer_id'],
 				'manufacturer'     => $query->row['manufacturer'],
                 'price'            => ($query->row['discount'] ? $query->row['discount'] : $query->row['price']),
@@ -451,7 +452,7 @@ class ModelCatalogProduct extends Model {
 
 		return $query->rows;		
 	}
-		
+
 	public function getProductImages($product_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_image WHERE product_id = '" . (int)$product_id . "' ORDER BY sort_order ASC");
 

@@ -554,7 +554,7 @@ class ControllerCatalogProduct extends Controller {
 			'href'      => $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, 'SSL'),       		
       		'separator' => ' :: '
    		);
-		
+
 		$this->data['insert'] = $this->url->link('catalog/product/insert', 'token=' . $this->session->data['token'] . $url, 'SSL');
 		$this->data['copy'] = $this->url->link('catalog/product/copy', 'token=' . $this->session->data['token'] . $url, 'SSL');	
 		$this->data['delete'] = $this->url->link('catalog/product/delete', 'token=' . $this->session->data['token'] . $url, 'SSL');
@@ -841,6 +841,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['entry_dimension'] = $this->language->get('entry_dimension');
 		$this->data['entry_length'] = $this->language->get('entry_length');
     	$this->data['entry_image'] = $this->language->get('entry_image');
+        $this->data['entry_image_sales'] = $this->language->get('entry_image_sales');
     	$this->data['entry_download'] = $this->language->get('entry_download');
     	$this->data['entry_category'] = $this->language->get('entry_category');
 		$this->data['entry_filter'] = $this->language->get('entry_filter');
@@ -1099,6 +1100,14 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$this->data['image'] = '';
 		}
+//				IMAGESALES
+        if (isset($this->request->post['image_sales'])) {
+            $this->data['image_sales'] = $this->request->post['image_sales'];
+        } elseif (!empty($product_info)) {
+            $this->data['image_sales'] = $product_info['image_sales'];
+        } else {
+            $this->data['image_sales'] = '';
+        }
 		
 		$this->load->model('tool/image');
 		
@@ -1110,6 +1119,8 @@ class ControllerCatalogProduct extends Controller {
 			$this->data['thumb'] = $this->model_tool_image->resize('no_image.jpg', 100, 100);
 			$this->data['image'] = 'no_image.jpg';
 		}
+
+
 		$this->load->model('catalog/manufacturer');
 		
     	$this->data['manufacturers'] = $this->model_catalog_manufacturer->getManufacturers();
@@ -1577,7 +1588,7 @@ class ControllerCatalogProduct extends Controller {
 				
 		$this->response->setOutput($this->render());
   	} 
-	
+
   	protected function validateForm() { 
     	if (!$this->user->hasPermission('modify', 'catalog/product')) {
       		$this->error['warning'] = $this->language->get('error_permission');
