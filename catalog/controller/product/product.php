@@ -165,10 +165,6 @@ class ControllerProductProduct extends Controller {
                         //высчитываем скидку
         $products_discount =  $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
 
-                        //imageSales
-        if($product_info['products_discount'] > 0) {
-            $image_sales = $this->data['image_sales'] = "../../image/" . $product_info['image_sales'];
-        }
 
                     //width and height
         $sales_w = $this->data['sales_w'] = $product_info['sales_w'];
@@ -339,8 +335,11 @@ class ControllerProductProduct extends Controller {
                 //PRICE DISCOUNT
             if ($products_discount > 0) {
                 $this->data['price'] = $this->currency->format($this->tax->calculate($products_discount, $product_info['tax_class_id'], $this->config->get('config_tax')));
+                //imageSales
+                $image_sales = $this->data['image_sales'] = "../../image/" . $product_info['image_sales'];
             } else if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
                 $this->data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+
             } else {
                 $this->data['price'] = false;
             }

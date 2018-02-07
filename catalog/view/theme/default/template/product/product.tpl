@@ -1,12 +1,6 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
 <style type="text/css">
-  #imageSale2 {
-    display: inline-block;
-    /*width: 40px;*/
-    height: 40px;
-    margin-left: 15px;
-    position: absolute;
-  }
+
 </style>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
@@ -21,7 +15,7 @@
       <div class="image">
         <!-- картинка скидка на фото -->
         <?php if(isset($image_sales)) { ?>
-        <!--конкатенация-->
+        <!--конкатенация width height px -->
         <?php $sales_w.="px";?>
         <?php $sales_h.="px";?>
 
@@ -65,10 +59,12 @@
 
       <?php if ($price) { ?>
       <div class="price"><?php echo $text_price; ?>
-        <!-- картинка скидки возле цены -->
         <?php if (!$special) { ?>
         <?php echo $price; ?>
-        <img src="<?php echo $image_sales; ?>" id="imageSale2" <?php echo "style='width:$sales_w; height:$sales_h'";?> />
+          <!-- картинка скидки возле цены -->
+          <?php if(isset($image_sales)) { ?>
+            <img src="<?php echo $image_sales; ?>" id="imageSale2" <?php echo "style='width:$sales_w; height:$sales_h'";?> />
+          <?php } ?>
         <?php } else { ?>
         <span class="price-old"><?php echo $price; ?></span> <span class="price-new"><?php echo $special; ?></span>
         <?php } ?>
