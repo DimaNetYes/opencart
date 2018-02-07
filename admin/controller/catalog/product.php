@@ -832,6 +832,8 @@ class ControllerCatalogProduct extends Controller {
     	$this->data['entry_price'] = $this->language->get('entry_price');
         $this->data['entry_imageSales'] = $this->language->get('entry_imageSales');
         $this->data['entry_products_discount'] = $this->language->get('entry_products_discount');
+        $this->data['entry_width'] = $this->language->get('entry_width');
+        $this->data['entry_height'] = $this->language->get('entry_height');
 		$this->data['entry_tax_class'] = $this->language->get('entry_tax_class');
 		$this->data['entry_points'] = $this->language->get('entry_points');
 		$this->data['entry_option_points'] = $this->language->get('entry_option_points');
@@ -842,6 +844,8 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['entry_length'] = $this->language->get('entry_length');
     	$this->data['entry_image'] = $this->language->get('entry_image');
         $this->data['entry_image_sales'] = $this->language->get('entry_image_sales');
+        $this->data['entry_sales_w'] = $this->language->get('entry_sales_w');
+        $this->data['entry_sales_h'] = $this->language->get('entry_sales_h');
     	$this->data['entry_download'] = $this->language->get('entry_download');
     	$this->data['entry_category'] = $this->language->get('entry_category');
 		$this->data['entry_filter'] = $this->language->get('entry_filter');
@@ -864,7 +868,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['entry_main_category'] = $this->language->get('entry_main_category');
 		$this->data['entry_seo_title'] = $this->language->get('entry_seo_title');
 		$this->data['entry_seo_h1'] = $this->language->get('entry_seo_h1');
-				
+
     	$this->data['button_save'] = $this->language->get('button_save');
     	$this->data['button_cancel'] = $this->language->get('button_cancel');
 		$this->data['button_add_attribute'] = $this->language->get('button_add_attribute');
@@ -1144,12 +1148,29 @@ class ControllerCatalogProduct extends Controller {
 		}
 		
     	if (isset($this->request->post['price'])) {
-      		$this->data['price'] = $this->request->post['price'];
-    	} elseif (!empty($product_info)) {
-			$this->data['price'] = $product_info['price'];
-		} else {
-      		$this->data['price'] = '';
-    	}
+            $this->data['price'] = $this->request->post['price'];
+        } elseif (!empty($product_info)) {
+            $this->data['price'] = $product_info['price'];
+        } else {
+            $this->data['price'] = '';
+        }
+
+        if (isset($this->request->post['sales_w'])) {
+            $this->data['sales_w'] = $this->request->post['sales_w'];
+        } elseif (!empty($product_info)) {
+            $this->data['sales_w'] = $product_info['sales_w'];
+        } else {
+            $this->data['sales_w'] = '';
+        }
+
+        if (isset($this->request->post['sales_h'])) {
+            $this->data['sales_h'] = $this->request->post['sales_h'];
+        } elseif (!empty($product_info)) {
+            $this->data['sales_h'] = $product_info['sales_h'];
+        } else {
+            $this->data['sales_h'] = '';
+        }
+
 
         if (isset($this->request->post['products_discount'])) {
             $this->data['products_discount'] = $this->request->post['products_discount'];
@@ -1159,13 +1180,6 @@ class ControllerCatalogProduct extends Controller {
             $this->data['products_discount'] = '';
         }
 
-		if (isset($this->request->post['imageSales'])) {
-            $this->data['imageSales'] = $this->request->post['imageSales'];
-        } else if (isset($product_info)) {
-            $this->data['imageSales'] = $product_info['imageSales'];
-        } else {
-            $this->data['imageSales'] = '';
-        }
 
 		$this->load->model('localisation/tax_class');
 		
@@ -1266,7 +1280,7 @@ class ControllerCatalogProduct extends Controller {
 		} else {
       		$this->data['length'] = '';
     	}
-		
+
 		if (isset($this->request->post['width'])) {
       		$this->data['width'] = $this->request->post['width'];
 		} elseif (!empty($product_info)) {	

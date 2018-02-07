@@ -52,6 +52,8 @@ $_['entry_minimum']          = 'Минимальное количество:<br/
 $_['entry_stock_status']     = 'Остутствие на складе:<br /><span class="help">Статус, показываемый, когда товара нет на складе</span>';
 $_['entry_price']            = 'Цена:';
 $_['entry_image_sales']       = 'Картинка Скидки:';
+$_['entry_sales_w']       = 'Ширина:';
+$_['entry_sales_h']       = 'Высота:';
 $_['entry_tax_class']        = 'Налог:';
 $_['entry_points']           = 'Баллы:<br/><span class="help">Количество баллов для покупки товара. Поставьте 0, чтобы товар нельзя было приобрести за баллы.</span>';
 $_['entry_option_points']    = 'Баллы:';
