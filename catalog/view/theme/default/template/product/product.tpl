@@ -11,7 +11,7 @@
       <?php if ($thumb) { ?>
       <div class="image">
         <!-- скидка -->
-        <?php  ?> <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox2"> <img src="<?php echo $file; ?>" title="<?php echo $file; ?>" alt="<?php echo $file; ?>" id="imageSale" /> </a> <?php } ?>
+        <?php  ?> <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox2"> <img src="<?php echo $image_sales; ?>" title="<?php echo $image_sales; ?>" alt="<?php echo $image_sales; ?>" id="imageSale" /> </a> <?php } ?>
         <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" />
        </a>
       </div>

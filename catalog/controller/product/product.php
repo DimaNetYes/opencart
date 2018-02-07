@@ -159,11 +159,14 @@ class ControllerProductProduct extends Controller {
 		} else {
 			$product_id = 0;
 		}
-		
+
 		$this->load->model('catalog/product');
 		$product_info = $this->model_catalog_product->getProduct($product_id);
                         //высчитываем скидку
         $products_discount =  $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
+
+                        //imageSales
+        $image_sales = $this->data['image_sales'] = "../../image/". $product_info['image_sales'];
 
 		if ($product_info) {
 			$url = '';
@@ -254,6 +257,7 @@ class ControllerProductProduct extends Controller {
 			$this->data['text_tax'] = $this->language->get('text_tax');
 			$this->data['text_discount'] = $this->language->get('text_discount');
             $this->data['text_products_discount'] = $this->language->get('text_products_discount');
+
 			$this->data['text_option'] = $this->language->get('text_option');
 			$this->data['text_qty'] = $this->language->get('text_qty');
 			$this->data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
