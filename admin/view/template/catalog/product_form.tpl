@@ -303,7 +303,8 @@
                   </div>
                   <?php } ?>
                 </div></td>
-            </tr>                       
+            </tr>
+              type="form"
             <tr>
               <td><?php echo $entry_store; ?></td>
               <td><div class="scrollbox">

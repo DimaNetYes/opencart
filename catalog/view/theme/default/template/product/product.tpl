@@ -47,8 +47,11 @@
         <?php } ?>
         <br />
 
-
-
+        <tr>
+          <td><b><?php echo $text_products_discount; ?></b></td>
+          <td><?php echo "\$".$products_discount; ?></td>
+        </tr>
+<br>
 
 
         <?php if ($tax) { ?>

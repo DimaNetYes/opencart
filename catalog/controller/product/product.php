@@ -4,7 +4,7 @@ class ControllerProductProduct extends Controller {
 	
 	public function index() { 
 		$this->language->load('product/product');
-	
+
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
@@ -107,7 +107,7 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 		}
-		
+
 		if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
 			$url = '';
 			
@@ -162,7 +162,9 @@ class ControllerProductProduct extends Controller {
 		
 		$this->load->model('catalog/product');
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-//        print_r($product_info);
+                        //высчитываем скидку
+        $products_discount =  $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
+
 		if ($product_info) {
 			$url = '';
 			
@@ -247,11 +249,11 @@ class ControllerProductProduct extends Controller {
 			$this->data['text_discount'] = $this->language->get('text_discount');
 			$this->data['text_stock'] = $this->language->get('text_stock');
 			$this->data['text_price'] = $this->language->get('text_price');
-
             $this->data['text_ean'] = $this->language->get('text_ean');
 
 			$this->data['text_tax'] = $this->language->get('text_tax');
 			$this->data['text_discount'] = $this->language->get('text_discount');
+            $this->data['text_products_discount'] = $this->language->get('text_products_discount');
 			$this->data['text_option'] = $this->language->get('text_option');
 			$this->data['text_qty'] = $this->language->get('text_qty');
 			$this->data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
@@ -304,7 +306,7 @@ class ControllerProductProduct extends Controller {
 			} else {
 				$this->data['popup'] = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
 			}
-			
+
 			if ($product_info['image']) {
 				$this->data['thumb'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
 				$this->document->setOgImage($this->data['thumb']);
@@ -352,8 +354,7 @@ class ControllerProductProduct extends Controller {
 					'price'    => $this->currency->format($this->tax->calculate($discount['price'], $product_info['tax_class_id'], $this->config->get('config_tax')))
 				);
 			}
-                    //Мои путь
-//            $this->data['file'] = "../../../../image/data/".$product_info['jan'];
+
 
 			$this->data['options'] = array();
 
@@ -369,17 +370,19 @@ class ControllerProductProduct extends Controller {
 								$price = false;
 							}
 
+
 							$option_value_data[] = array(
 								'product_option_value_id' => $option_value['product_option_value_id'],
 								'option_value_id'         => $option_value['option_value_id'],
 								'name'                    => $option_value['name'],
 								'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
 								'price'                   => $price,
+								'products_discount'       => $products_discount,
 								'price_prefix'            => $option_value['price_prefix']
 							);
 						}
 					}
-					
+
 					$this->data['options'][] = array(
 						'product_option_id' => $option['product_option_id'],
 						'option_id'         => $option['option_id'],
@@ -446,14 +449,14 @@ class ControllerProductProduct extends Controller {
 					'thumb'   	 => $image,
 					'name'    	 => $result['name'],
 					'price'   	 => $price,
-//                    'products_discount'       => $products_discount,
+                    'products_discount'       => $products_discount,
 					'special' 	 => $special,
 					'rating'     => $rating,
 					'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
 					'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}	
-			
+
 			$this->data['tags'] = array();
 			
 			if ($product_info['tag']) {		

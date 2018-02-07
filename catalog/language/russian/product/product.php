@@ -13,6 +13,7 @@ $_['text_price']        = 'Цена:';
 //$_['text_products_discount'] = 'Скидка:';
 $_['text_tax']          = 'Без НДС:';
 $_['text_discount']     = '%s или более %s';
+$_['text_products_discount'] = 'Цена со скидкой:';
 $_['text_option']       = 'Доступные варианты';
 $_['text_qty']          = 'Количество:';
 $_['text_minimum']      = 'Минимальное количество заказа этого товара: %s';

@@ -53,7 +53,7 @@ class ModelCatalogProduct extends Model {
 				'manufacturer_id'  => $query->row['manufacturer_id'],
 				'manufacturer'     => $query->row['manufacturer'],
                 'price'            => ($query->row['discount'] ? $query->row['discount'] : $query->row['price']),
-				'price'            => ($query->row['products_discount'] ? $query->row['products_discount'] : $query->row['price']),
+//				'price'            => ($query->row['products_discount'] ? $query->row['products_discount'] : $query->row['price']),
 				'special'          => $query->row['special'],
 				'reward'           => $query->row['reward'],
 				'points'           => $query->row['points'],
@@ -73,7 +73,8 @@ class ModelCatalogProduct extends Model {
 				'status'           => $query->row['status'],
 				'date_added'       => $query->row['date_added'],
 				'date_modified'    => $query->row['date_modified'],
-				'viewed'           => $query->row['viewed']
+				'viewed'           => $query->row['viewed'],
+                'products_discount'         =>$query->row['products_discount'],
 			);
 		} else {
 			return false;
@@ -202,7 +203,7 @@ class ModelCatalogProduct extends Model {
 			'p.sort_order',
 			'p.date_added'
 		);	
-		
+
 		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
 			if ($data['sort'] == 'pd.name' || $data['sort'] == 'p.model') {
 				$sql .= " ORDER BY LCASE(" . $data['sort'] . ")";
