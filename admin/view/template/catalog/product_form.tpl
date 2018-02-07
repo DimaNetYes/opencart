@@ -1230,6 +1230,37 @@ function image_upload(field, thumb) {
 //--></script>
 
 <script type="text/javascript"><!--
+    function image_upload(field, thumb2) {
+        $('#dialog').remove();
+
+        $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/filemanager&token=<?php echo $token; ?>&field=' + encodeURIComponent(field) + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+
+        $('#dialog').dialog({
+            title: '<?php echo $text_image_manager; ?>',
+            close: function (event, ui) {
+                if ($('#' + field).attr('value')) {
+                    $.ajax({
+                        url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent($('#' + field).attr('value')),
+                        dataType: 'text',
+                        success: function(text) {
+                            $('#' + thumb2).replaceWith('<img src="' + text + '" alt="" id="' + thumb2 + '" />');
+                        }
+                    });
+                }
+            },
+            bgiframe: false,
+            width: 800,
+            height: 400,
+            resizable: false,
+            modal: false
+        });
+    };
+    //--></script>
+
+
+
+
+<script type="text/javascript"><!--
 var image_row = <?php echo $image_row; ?>;
 
 function addImage() {
@@ -1246,6 +1277,28 @@ function addImage() {
 	image_row++;
 }
 //--></script>
+
+
+<script type="text/javascript"><!--
+    var image_row = <?php echo $image_row; ?>;
+
+    function addImage() {
+        html  = '<tbody id="image-row' + image_row + '">';
+        html += '  <tr>';
+        html += '    <td class="left"><div class="image"><img src="<?php echo $no_image; ?>" alt="" id="thumb2' + image_row + '" /><input type="hidden" name="product_image[' + image_row + '][image]" value="" id="image' + image_row + '" /><br /><a onclick="image_upload(\'image' + image_row + '\', \'thumb2' + image_row + '\');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb2' + image_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#image' + image_row + '\').attr(\'value\', \'\');"><?php echo $text_clear; ?></a></div></td>';
+        html += '    <td class="right"><input type="text" name="product_image[' + image_row + '][sort_order]" value="" size="2" /></td>';
+        html += '    <td class="left"><a onclick="$(\'#image-row' + image_row  + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
+        html += '  </tr>';
+        html += '</tbody>';
+
+        $('#images tfoot').before(html);
+
+        image_row++;
+    }
+    //--></script>
+
+
+
 <script type="text/javascript" src="view/javascript/jquery/ui/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript"><!--
 $('.date').datepicker({dateFormat: 'yy-mm-dd'});

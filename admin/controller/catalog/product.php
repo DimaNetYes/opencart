@@ -115,7 +115,7 @@ class ControllerCatalogProduct extends Controller {
 		if (isset($this->request->get['order'])) {
 			$url .= '&order=' . $this->request->get['order'];
 		}
-		
+
 		$data = array(
 			'filter_name'	  => $filter_name, 
 			'filter_category_id'	  => $filter_category_id, 
@@ -1120,6 +1120,16 @@ class ControllerCatalogProduct extends Controller {
 			$this->data['image'] = 'no_image.jpg';
 		}
 
+		//IMAGESALES picture on admin panel
+        if (isset($this->request->post['image_sales']) && file_exists(DIR_IMAGE . $this->request->post['image_sales'])) {
+            $this->data['thumb2'] = $this->model_tool_image->resize($this->request->post['image_sales'], 100, 100);
+        } elseif (!empty($product_info) && $product_info['image_sales'] && file_exists(DIR_IMAGE . $product_info['image_sales'])) {
+            $this->data['thumb2'] = $this->model_tool_image->resize($product_info['image_sales'], 100, 100);
+        } else {
+            $this->data['thumb2'] = $this->model_tool_image->resize('no_image.jpg', 100, 100);
+            $this->data['image_sales'] = 'no_image.jpg';
+        }
+
 
 		$this->load->model('catalog/manufacturer');
 		
@@ -1156,7 +1166,7 @@ class ControllerCatalogProduct extends Controller {
         } else {
             $this->data['imageSales'] = '';
         }
-		
+
 		$this->load->model('localisation/tax_class');
 		
 		$this->data['tax_classes'] = $this->model_localisation_tax_class->getTaxClasses();
