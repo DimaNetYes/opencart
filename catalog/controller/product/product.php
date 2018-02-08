@@ -343,13 +343,16 @@ class ControllerProductProduct extends Controller {
             if ($products_discount > 0) {
                 $this->data['price'] = $this->currency->format($this->tax->calculate($products_discount, $product_info['tax_class_id'], $this->config->get('config_tax')));
                 //imageSales
-                $this->data['image_sales'] = $this->model_tool_image->resize($product_info['image_sales'],$product_info['sales_w'], $product_info['sales_h']);
+                if(!empty($product_info['sales_w'] && $product_info['sales_h'])) {
+                    $this->data['image_sales'] = $this->model_tool_image->resize($product_info['image_sales'], $product_info['sales_w'], $product_info['sales_h']);
+                }
             } else if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
                 $this->data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
             } else {
                 $this->data['price'] = false;
                 $image_sales = null;
             }
+
 
 			if ((float)$product_info['special']) {
 				$this->data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
