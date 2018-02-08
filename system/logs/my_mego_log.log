@@ -867,3 +867,58 @@
 2018-02-08 14:38:42 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
 2018-02-08 14:38:43 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
 2018-02-08 14:50:32 - PHP Notice:  Undefined variable: product in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 41
+2018-02-08 15:03:26 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 67
+2018-02-08 15:03:34 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 67
+2018-02-08 15:05:10 - PHP Notice:  Use of undefined constant product - assumed 'product' in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 72
+2018-02-08 15:05:10 - PHP Notice:  Use of undefined constant product - assumed 'product' in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 72
+2018-02-08 15:05:10 - PHP Notice:  Use of undefined constant product - assumed 'product' in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 72
+2018-02-08 15:05:10 - PHP Notice:  Use of undefined constant product - assumed 'product' in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 72
+2018-02-08 15:05:10 - PHP Notice:  Use of undefined constant product - assumed 'product' in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 72
+2018-02-08 15:26:31 - PHP Warning:  Missing argument 2 for ModelToolImage::resize(), called in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 346 and defined in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 14
+2018-02-08 15:26:31 - PHP Warning:  Missing argument 3 for ModelToolImage::resize(), called in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 346 and defined in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 14
+2018-02-08 15:26:31 - PHP Notice:  Undefined variable: width in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 24
+2018-02-08 15:26:31 - PHP Notice:  Undefined variable: height in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 24
+2018-02-08 15:26:31 - PHP Notice:  Undefined variable: width in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 41
+2018-02-08 15:26:31 - PHP Notice:  Undefined variable: width in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 43
+2018-02-08 15:26:31 - PHP Notice:  Undefined variable: height in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 43
+2018-02-08 15:26:31 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\OSPanel\domains\ocs\system\library\image.php on line 96
+2018-02-08 15:26:31 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 104
+2018-02-08 15:26:31 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 107
+2018-02-08 15:26:31 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 109
+2018-02-08 15:26:43 - PHP Warning:  Missing argument 2 for ModelToolImage::resize(), called in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 346 and defined in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 14
+2018-02-08 15:26:43 - PHP Warning:  Missing argument 3 for ModelToolImage::resize(), called in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 346 and defined in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 14
+2018-02-08 15:26:43 - PHP Notice:  Undefined variable: width in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 24
+2018-02-08 15:26:43 - PHP Notice:  Undefined variable: height in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 24
+2018-02-08 15:26:43 - PHP Notice:  Undefined variable: width in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 41
+2018-02-08 15:26:43 - PHP Notice:  Undefined variable: width in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 43
+2018-02-08 15:26:43 - PHP Notice:  Undefined variable: height in D:\OSPanel\domains\ocs\catalog\model\tool\image.php on line 43
+2018-02-08 15:26:43 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\OSPanel\domains\ocs\system\library\image.php on line 96
+2018-02-08 15:26:43 - PHP Warning:  imagealphablending() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 99
+2018-02-08 15:26:43 - PHP Warning:  imagesavealpha() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 100
+2018-02-08 15:26:43 - PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 101
+2018-02-08 15:26:43 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 102
+2018-02-08 15:26:43 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 107
+2018-02-08 15:26:43 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 109
+2018-02-08 15:34:13 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 281
+2018-02-08 15:34:55 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 281
+2018-02-08 15:35:11 - PHP Warning:  imagecreatetruecolor() expects parameter 1 to be long, string given in D:\OSPanel\domains\ocs\system\library\image.php on line 96
+2018-02-08 15:35:11 - PHP Warning:  imagealphablending() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 99
+2018-02-08 15:35:11 - PHP Warning:  imagesavealpha() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 100
+2018-02-08 15:35:11 - PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 101
+2018-02-08 15:35:11 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 102
+2018-02-08 15:35:11 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 107
+2018-02-08 15:35:11 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 109
+2018-02-08 15:35:21 - PHP Warning:  imagecreatetruecolor() expects parameter 1 to be long, string given in D:\OSPanel\domains\ocs\system\library\image.php on line 96
+2018-02-08 15:35:21 - PHP Warning:  imagealphablending() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 99
+2018-02-08 15:35:21 - PHP Warning:  imagesavealpha() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 100
+2018-02-08 15:35:21 - PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 101
+2018-02-08 15:35:21 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 102
+2018-02-08 15:35:21 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 107
+2018-02-08 15:35:21 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 109
+2018-02-08 15:35:28 - PHP Warning:  imagecreatetruecolor() expects parameter 1 to be long, string given in D:\OSPanel\domains\ocs\system\library\image.php on line 96
+2018-02-08 15:35:28 - PHP Warning:  imagealphablending() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 99
+2018-02-08 15:35:28 - PHP Warning:  imagesavealpha() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 100
+2018-02-08 15:35:28 - PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 101
+2018-02-08 15:35:28 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 102
+2018-02-08 15:35:28 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 107
+2018-02-08 15:35:28 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in D:\OSPanel\domains\ocs\system\library\image.php on line 109

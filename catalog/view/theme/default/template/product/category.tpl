@@ -69,6 +69,7 @@
   <div class="product-list">
     <?php foreach ($products as $product) { ?>
     <div>
+
       <?php if ($product['thumb']) { ?>
       <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
       <?php } ?>
@@ -84,6 +85,10 @@
         <?php if ($product['tax']) { ?>
         <br />
         <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+        <?php } ?>
+        <br><br>
+        <?php if(isset($product['image_sales'])) { ?>
+          <img src="<?php echo $product['image_sales'] ?>" alt="">
         <?php } ?>
       </div>
       <?php } ?>

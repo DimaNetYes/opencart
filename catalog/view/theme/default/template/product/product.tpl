@@ -15,13 +15,10 @@
       <div class="image">
         <!-- картинка скидка на фото -->
         <?php if(isset($image_sales)) { ?>
-        <!--конкатенация width height px -->
-        <?php $sales_w.="px";?>
-        <?php $sales_h.="px";?>
 
         <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox2">
           <?php if($field_discount > 0) { ?>
-            <img src="<?php echo $image_sales; ?>" id="imageSale" <?php echo "style='width:$sales_w; height:$sales_h'";?> />
+            <img src="<?php echo $image_sales; ?>" id="imageSale" />
           <?php } ?>
         </a> <?php } ?>
         <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox">
@@ -64,7 +61,7 @@
         <?php echo $price; ?>
           <!-- картинка скидки возле цены -->
           <?php if(isset($image_sales) && $field_discount > 0) { ?>
-            <img src="<?php echo $image_sales; ?>" id="imageSale2" <?php echo "style='width:$sales_w; height:$sales_h'";?> />
+            <img src="<?php echo $image_sales; ?>" id="imageSale2" />
           <?php } ?>
         <?php } else { ?>
         <span class="price-old"><?php echo $price; ?></span> <span class="price-new"><?php echo $special; ?></span>

@@ -244,7 +244,11 @@ class ControllerProductCategory extends Controller {
                     $price = $oldPrice;
                 }else if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-                    $this->data['image_sales'] = "../../image/" . $result['image_sales'];
+					if(!empty($result['image_sales'])) {
+                        $image_sales = $this->model_tool_image->resize($result['image_sales'],$result['sales_w'], $result['sales_h']);  //картинка скидки
+                    }else{
+                        $image_sales = null;
+					}
 				} else {
 					$price = false;
 				}
@@ -267,13 +271,14 @@ class ControllerProductCategory extends Controller {
 				} else {
 					$rating = false;
 				}
-								
+
 				$this->data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 300) . '..',
 					'price'       => $price,
+					'image_sales'  => $image_sales,
 					'special'     => $special,
 					'tax'         => $tax,
 					'rating'      => $result['rating'],
