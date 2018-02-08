@@ -826,3 +826,44 @@
 2018-02-08 10:35:36 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 362
 2018-02-08 10:36:18 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 342
 2018-02-08 10:36:18 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 361
+2018-02-08 13:19:15 - PHP Notice:  Undefined variable: data in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 166
+2018-02-08 13:19:17 - PHP Notice:  Undefined variable: data in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 166
+2018-02-08 13:19:46 - PHP Notice:  Undefined index: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 166
+2018-02-08 13:23:56 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:23:56 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:23:56 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:25:19 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:25:19 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:25:19 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:36 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:36 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:36 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:56 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:56 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:56 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:57 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:57 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:29:57 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 234
+2018-02-08 13:43:45 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 274
+2018-02-08 13:43:47 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 274
+2018-02-08 13:49:30 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 274
+2018-02-08 14:18:52 - PHP Notice:  Undefined variable: data in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 175
+2018-02-08 14:18:53 - PHP Notice:  Undefined variable: data in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 175
+2018-02-08 14:26:44 - PHP Notice:  Undefined index: image_sales in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 346
+2018-02-08 14:27:08 - PHP Notice:  Undefined index: image_sales in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 346
+2018-02-08 14:27:09 - PHP Notice:  Undefined index: image_sales in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 346
+2018-02-08 14:32:27 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:32:29 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:32:30 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:33:31 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:34:35 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:37:19 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:37:27 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:38:06 - PHP Notice:  Indirect modification of overloaded property ControllerProductCategory::$result has no effect in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 243
+2018-02-08 14:38:06 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:38:12 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:38:13 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:38:24 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:38:42 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:38:43 - PHP Notice:  Undefined variable: price in D:\OSPanel\domains\ocs\catalog\controller\product\category.php on line 275
+2018-02-08 14:50:32 - PHP Notice:  Undefined variable: product in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\category.tpl on line 41

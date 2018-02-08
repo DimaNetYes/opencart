@@ -222,20 +222,33 @@ class ControllerProductCategory extends Controller {
 			$results = $this->model_catalog_product->getProducts($data);
 			//Вызов метода getFoundProducts должен проводится сразу же после getProducts
 			//только тогда он выдает правильное значения количества товаров
-			$product_total = $this->model_catalog_product->getFoundProducts(); 
-			
+			$product_total = $this->model_catalog_product->getFoundProducts();
+
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				} else {
 					$image = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				}
-				
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+					//ВЫСЧИТЫВАЕМ СКИДКУ
+                $oldPrice = $result['price'];
+				if($result['select_discount'] == 2) {
+						$result['price'] = $result['price'] - $result['products_discount'];
+                }else{
+                    $percentOfSale = $result['price'] * $result['products_discount'] / 100;
+                    $result['price'] = $result['price'] - $percentOfSale;
+                }
+
+
+                if ($result['price'] < 0) {
+                    $price = $oldPrice;
+                }else if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+                    $this->data['image_sales'] = "../../image/" . $result['image_sales'];
 				} else {
 					$price = false;
 				}
+
 				
 				if ((float)$result['special']) {
 					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
@@ -384,7 +397,7 @@ class ControllerProductCategory extends Controller {
 			if (isset($this->request->get['limit'])) {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
-					
+
 			$pagination = new Pagination();
 			$pagination->total = $product_total;
 			$pagination->page = $page;

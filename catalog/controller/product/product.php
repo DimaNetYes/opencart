@@ -163,6 +163,7 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 		$product_info = $this->model_catalog_product->getProduct($product_id);
                         //высчитываем скидку
+
         if($product_info['select_discount'] == 2) {
             $products_discount = $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
         }else{
@@ -328,7 +329,7 @@ class ControllerProductProduct extends Controller {
 			}
 			
 			$this->data['images'] = array();
-			
+
 			$results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
 			
 			foreach ($results as $result) {
@@ -342,15 +343,14 @@ class ControllerProductProduct extends Controller {
             if ($products_discount > 0) {
                 $this->data['price'] = $this->currency->format($this->tax->calculate($products_discount, $product_info['tax_class_id'], $this->config->get('config_tax')));
                 //imageSales
-                $image_sales = $this->data['image_sales'] = "../../image/" . $product_info['image_sales'];
+                $this->data['image_sales'] = "../../image/" . $product_info['image_sales'];
             } else if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
                 $this->data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
-
             } else {
                 $this->data['price'] = false;
                 $image_sales = null;
             }
-						
+
 			if ((float)$product_info['special']) {
 				$this->data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 			} else {
