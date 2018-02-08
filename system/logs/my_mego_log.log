@@ -812,3 +812,17 @@
 2018-02-07 23:22:35 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 71
 2018-02-07 23:23:24 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 69
 2018-02-07 23:23:25 - PHP Notice:  Undefined variable: image_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 69
+2018-02-08 10:10:49 - PHP Notice:  Undefined variable: imge_sales in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 17
+2018-02-08 10:21:27 - PHP Notice:  Use of undefined constant products_discount - assumed 'products_discount' in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 17
+2018-02-08 10:21:45 - PHP Notice:  Use of undefined constant products_discount - assumed 'products_discount' in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 17
+2018-02-08 10:23:00 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 162
+2018-02-08 10:24:21 - PHP Notice:  Undefined variable: field_discount in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 23
+2018-02-08 10:24:23 - PHP Notice:  Undefined variable: field_discount in D:\OSPanel\domains\ocs\catalog\view\theme\default\template\product\product.tpl on line 23
+2018-02-08 10:35:19 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 342
+2018-02-08 10:35:19 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 361
+2018-02-08 10:35:35 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 343
+2018-02-08 10:35:35 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 362
+2018-02-08 10:35:36 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 343
+2018-02-08 10:35:36 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 362
+2018-02-08 10:36:18 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 342
+2018-02-08 10:36:18 - PHP Notice:  Undefined variable: products_discount in D:\OSPanel\domains\ocs\catalog\controller\product\product.php on line 361

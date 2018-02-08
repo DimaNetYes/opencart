@@ -163,7 +163,13 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 		$product_info = $this->model_catalog_product->getProduct($product_id);
                         //высчитываем скидку
-        $products_discount =  $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
+        if($product_info['select_discount'] == 2) {
+            $products_discount = $this->data['products_discount'] = $product_info['price'] - $product_info['products_discount'];
+        }else{
+            $percentOfSale = $product_info['price'] * $product_info['products_discount'] / 100;
+            $products_discount = $this->data['products_discount'] = $product_info['price'] - $percentOfSale;
+        }
+        $this->data['field_discount'] = $product_info['products_discount'];
 
 
                     //width and height
@@ -305,7 +311,7 @@ class ControllerProductProduct extends Controller {
 			} else {
 				$this->data['stock'] = $this->language->get('text_instock');
 			}
-			
+
 			$this->load->model('tool/image');
 
 			if ($product_info['image']) {
@@ -342,6 +348,7 @@ class ControllerProductProduct extends Controller {
 
             } else {
                 $this->data['price'] = false;
+                $image_sales = null;
             }
 						
 			if ((float)$product_info['special']) {
