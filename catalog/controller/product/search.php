@@ -224,24 +224,44 @@ class ControllerProductSearch extends Controller {
 				} else {
 					$image = false;
 				}
-				
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-				} else {
-					$price = false;
-				}
+
+                //ВЫСЧИТЫВАЕМ СКИДКУ
+                $oldPrice = $result['price'];
+                if($result['select_discount'] == 2) {
+                    $result['price'] = $result['price'] - $result['products_discount'];
+                }else{
+                    $percentOfSale = $result['price'] * $result['products_discount'] / 100;
+                    $result['price'] = $result['price'] - $percentOfSale;
+                }
+
+
+                if ($result['price'] < 0) {
+                    $price = $oldPrice;
+                }else if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                    $price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+                    if(!empty($result['sales_w'] && $result['sales_h']) && $result['products_discount'] > 0) {
+                        $image_sales = $this->model_tool_image->resize($result['image_sales'],$result['sales_w'], $result['sales_h']);  //картинка скидки
+                    }else{
+                        $image_sales = null;
+                    }
+                } else {
+                    $price = false;
+                }
 				
 				if ((float)$result['special']) {
 					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$special = false;
-				}	
-				
-				if ($this->config->get('config_tax')) {
-					$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
-				} else {
-					$tax = false;
-				}				
+				}
+
+
+                if ($result['price'] < 0) {
+                    $tax = $oldPrice;
+                }else if ($this->config->get('config_tax')) {
+                    $tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
+                } else {
+                    $tax = false;
+                }
 				
 				if ($this->config->get('config_review_status')) {
 					$rating = (int)$result['rating'];
@@ -255,6 +275,7 @@ class ControllerProductSearch extends Controller {
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 300) . '..',
 					'price'       => $price,
+                    'image_sales'  => $image_sales,
 					'special'     => $special,
 					'tax'         => $tax,
 					'rating'      => $result['rating'],

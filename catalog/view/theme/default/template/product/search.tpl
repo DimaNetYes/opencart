@@ -102,6 +102,10 @@
         <br />
         <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
         <?php } ?>
+        <br><br>
+        <?php if(isset($product['image_sales'])) { ?>
+          <img src="<?php echo $product['image_sales'] ?>" alt="">
+        <?php } ?>
       </div>
       <?php } ?>
       <?php if ($product['rating']) { ?>
