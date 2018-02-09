@@ -1121,3 +1121,8 @@
 2018-02-08 16:01:15 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 104
 2018-02-08 16:01:15 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 107
 2018-02-08 16:01:15 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\OSPanel\domains\ocs\system\library\image.php on line 109
+2018-02-09 12:46:32 - PHP Notice:  Error: Could not load language module/newBanner! in D:\OSPanel\domains\ocs\system\library\language.php on line 39
+2018-02-09 12:47:05 - PHP Notice:  Error: Could not load language module/newBanner! in D:\OSPanel\domains\ocs\system\library\language.php on line 39
+2018-02-09 12:55:40 - PHP Notice:  Undefined variable: entry_layut in D:\OSPanel\domains\ocs\admin\view\template\module\banner.tpl on line 23
+2018-02-09 12:55:42 - PHP Notice:  Undefined variable: entry_layut in D:\OSPanel\domains\ocs\admin\view\template\module\banner.tpl on line 23
+2018-02-09 13:04:46 - PHP Notice:  Error: Could not load language module/newBanner! in D:\OSPanel\domains\ocs\system\library\language.php on line 39
