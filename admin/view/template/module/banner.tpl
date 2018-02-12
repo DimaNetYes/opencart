@@ -28,6 +28,7 @@
             </tr>
           </thead>
           <?php $module_row = 0; ?>
+            <?php print_r($modules)  ?>
           <?php foreach ($modules as $module) { ?>
           <tbody id="module-row<?php echo $module_row; ?>">
             <tr>

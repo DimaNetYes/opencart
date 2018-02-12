@@ -78,10 +78,12 @@ class ControllerModuleBanner extends Controller {
 		
 		if (isset($this->request->post['banner_module'])) {
 			$this->data['modules'] = $this->request->post['banner_module'];
+
 		} elseif ($this->config->get('banner_module')) { 
 			$this->data['modules'] = $this->config->get('banner_module');
+
 		}	
-				
+
 		$this->load->model('design/layout');
 		
 		$this->data['layouts'] = $this->model_design_layout->getLayouts();
@@ -89,7 +91,7 @@ class ControllerModuleBanner extends Controller {
 		$this->load->model('design/banner');
 		
 		$this->data['banners'] = $this->model_design_banner->getBanners();
-				
+
 		$this->template = 'module/banner.tpl';
 		$this->children = array(
 			'common/header',

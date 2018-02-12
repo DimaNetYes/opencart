@@ -4,15 +4,19 @@ class ControllerModuleNewBanner extends Controller
     private $error = array();
 
     public function index(){
-        $this->load->language('module/newBanner');
+        $this->language->load('module/newBanner');
+
         $this->document->setTitle($this->language->get('heading_title'));
 
         // регистрируем модуль
         $this->load->model('setting/setting');
+
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
             $this->model_setting_setting->editSetting('newBanner', $this->request->post);
+
             $this->session->data['success'] = $this->language->get('text_success');
-            $data['success'] = $this->session->data['success'] ;
+
+            $this->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
         }
         //заполняем массив данных для отрисовки
         $this->data['heading_title'] = $this->language->get('heading_title');
@@ -27,7 +31,9 @@ class ControllerModuleNewBanner extends Controller
         $this->data['table_image'] = $this->language->get('table_image');
 
         $this->data['entry_banner'] = $this->language->get('entry_banner');
+        $this->data['entry_image'] = $this->language->get('entry_image');
         $this->data['entry_dimension'] = $this->language->get('entry_dimension');
+        $this->data['entry_category'] = $this->language->get('entry_category');
         $this->data['entry_layout'] = $this->language->get('entry_layout');
         $this->data['entry_position'] = $this->language->get('entry_position');
         $this->data['entry_status'] = $this->language->get('entry_status');
@@ -71,22 +77,30 @@ class ControllerModuleNewBanner extends Controller
         //Проверка на вкл/выкл модуля
         if (isset($this->request->post['newBanner_module'])) {
             $this->data['modules'] = $this->request->post['newBanner_module'];
-        } elseif ($this->config->get('banner_module')) {
+        } elseif ($this->config->get('newBanner_module')) {
             $this->data['modules'] = $this->config->get('newBanner_module');
+            print_r($this->data['modules']);
         }
 
-        //подгружаем баннеры из модели в архив
-        $this->load->model('newBanner/newBanner');
 
-        $this->data['newBanners'] = $this->model_newBanner_newBanner->getBanners();
+        //подгружаем баннеры из модели в архив
+        $this->load->model('newBanner/layout');
+        $this->data['layouts'] = $this->model_newBanner_layout->getLayouts();
+
+        $this->load->model('newBanner/newBanner');
+        $this->data['newBanners'] = $this->model_newBanner_newBanner->getAll();
+
+
 
         //подключаем шапки, колонки, хедера
-        $this->data['header'] = $this->load->controller('common/header');
-        $this->data['column_left'] = $this->load->controller('common/column_left');
-        $this->data['footer'] = $this->load->controller('common/footer');
+        $this->template = 'module/newBanner.tpl';
+        $this->children = array(
+            'common/header',
+            'common/footer'
+        );
 
         // передаем данные на отрисовку
-        $this->response->setOutput($this->load->view('module/newBanner.tpl', $data));
+        $this->response->setOutput($this->render());
 
     }
 
