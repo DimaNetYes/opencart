@@ -70,6 +70,12 @@ class ControllerModuleNewBanner extends Controller
             'separator' => ' :: '
         );
 
+        $this->data['breadcrumbs'][] = array(
+            'text'      => $this->language->get('heading_title'),
+            'href'      => $this->url->link('module/newBanner', 'token=' . $this->session->data['token'], 'SSL'),
+            'separator' => ' :: '
+        );
+
         $this->data['action'] = $this->url->link('module/newBanner', 'token=' . $this->session->data['token'], 'SSL');
 
         $this->data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
@@ -106,14 +112,24 @@ class ControllerModuleNewBanner extends Controller
 
     //так положено
     protected function validate() {
-        if (!$this->user->hasPermission('modify', 'module/NewBanner')) {
+        if (!$this->user->hasPermission('modify', 'module/newBanner')) {
             $this->error['warning'] = $this->language->get('error_permission');
         }
-        return !$this->error;
+
+        if (isset($this->request->post['banner_module'])) {
+            foreach ($this->request->post['banner_module'] as $key => $value) {
+                if (!$value['width'] || !$value['height']) {
+                    $this->error['dimension'][$key] = $this->language->get('error_dimension');
+                }
+            }
+        }
+
+        if (!$this->error) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
-
-    //добавление методов
 
 
 }
