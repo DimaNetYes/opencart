@@ -116,8 +116,8 @@ class ControllerModuleNewBanner extends Controller
             $this->error['warning'] = $this->language->get('error_permission');
         }
 
-        if (isset($this->request->post['banner_module'])) {
-            foreach ($this->request->post['banner_module'] as $key => $value) {
+        if (isset($this->request->post['newBanner_module'])) {
+            foreach ($this->request->post['newBanner_module'] as $key => $value) {
                 if (!$value['width'] || !$value['height']) {
                     $this->error['dimension'][$key] = $this->language->get('error_dimension');
                 }

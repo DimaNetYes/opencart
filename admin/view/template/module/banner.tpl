@@ -1,7 +1,6 @@
 <?php echo $header; ?>
 <div id="content">
   <div class="breadcrumb">
-      <?php print_r($breadcrumbs)  ?>
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
@@ -29,7 +28,6 @@
             </tr>
           </thead>
           <?php $module_row = 0; ?>
-            <?php print_r($modules)  ?>
           <?php foreach ($modules as $module) { ?>
           <tbody id="module-row<?php echo $module_row; ?>">
             <tr>

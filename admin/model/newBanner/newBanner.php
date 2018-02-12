@@ -16,10 +16,14 @@ Class ModelNewBannerNewBanner extends Model
         $banner_id = $this->db->getLastId();
 
     }
+    public function editBanner($banner_id, $data)
+    {
+        $this->db->query("UPDATE " . DB_PREFIX . "newBanner SET name = '" . $this->db->escape($data['name']) . "', status = '" . (int)$data['status'] . "' WHERE banner_id = '" . (int)$banner_id . "'");
+    }
 
-    public function deleteRow ($id){
-        $this->db->query("DELETE FROM " . DB_PREFIX . "comments WHERE id = ".$id);
-        return 'deleted';
+    public function deleteBanner($banner_id)
+    {
+        $this->db->query("DELETE FROM " . DB_PREFIX . "newBanner WHERE banner_id = '" . (int)$banner_id . "'");
     }
 
 }
